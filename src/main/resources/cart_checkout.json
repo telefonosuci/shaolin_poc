@@ -1,0 +1,41 @@
+{
+  "cartCheckOut": {
+    "sessionParameters": {},
+    "sessionInfo": {
+      "Id": ""
+    },
+    "configuration": {
+      "AccountId__c": "0019E00000SKfPqQAL",
+      "NE__AccountId__c": "0019E00000SKfPqQAL",
+      "CustomerCluster__c": "CL1",
+      "PrimaryTechnology__c": "ADSL",
+      "SecondaryTechnology__c": "",
+      "TertiaryTechnology__c": "",
+      "SalesChannel__c": "TELESALES IN",
+      "SalesSubChannel__c": null,
+      "PaymentMethod__c": "CARTA DI CREDITO",
+      "CustomerSegment__c": "Residential",
+      "OrderType__c": "FISSO E MOBILE",
+      "NE__Description__c": null,
+      "ActualComsyCode__c": "DR.4006.0101MI",
+      "ActualComsyCodeTech__c": "DR.4006.0101MI",
+      "AgreementCode__c": null,
+      "CouponCode__c": null,
+      "FlagEmployee__c": false,
+      "NumberOfUSIM__c": null,
+      "OrderCreationDate__c": "2017-10-09",
+      "OrderInsertionDate__c": "2017-10-09",
+      "OrderReason__c": null,
+      "OrderRejectType__c": null,
+      "NE__OrderStatus__c": "Pending",
+      "VocalOrderID__c": null,
+      "OrderVarPreOrPrePre__c": "N",
+      "NE__Configuration_SubType__c": "Standard",
+      "NE__ConfigurationStatus__c": "Valid",
+      "NE__Configuration_Type__c": "New",
+      "NE__Type__c": "InOrder",
+      "NE__Order_date__c": "2017-10-09"
+    },
+    "cart": []
+  }
+}
