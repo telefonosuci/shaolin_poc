@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shaolin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stili/heroic-features.css" rel="stylesheet">
+	
+	
+	<script data-require="jquery@2.1.1" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+	<script data-require="angular.js@1.2.19" data-semver="1.2.19" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="vendor/angulardraganddrop/angulardragdrop.js"></script> <!-- scripts per il drag and drop in angular http://codef0rmer.github.io/angular-dragdrop/#!/ -->
+	<script src="controller/controller.js"></script>
+    
+
+  </head>
+
+  <body ng-app="app0" ng-controller="ctr0">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-yellow fixed-top">
+      <div class="container padding-navbar">
+        <a class="navbar-brand" href="#">Shaolin</a>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+<br>
+      <!-- Jumbotron Header -->
+      <h2 class="display-3 top-margin">Seleziona un bundle:</h2>
+    <br>  
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="imgs/img_superjet.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">FAMILY PACK</h4>
+              <p class="card-text" >
+              Connettività fissa e fino a 4 linee mobili. Tutto in un solo pacchetto. <br>Niente sarà più come prima.
+               </p>
+            </div>
+            <div class="card-footer">
+              <a href="http://obvm01.replynet.prv:8080/shaolin/resources/shaolin" class="btn btn-primary">Aggiungi al carrello!</a>
+            </div>
+          </div>
+        </div>
+		
+		 <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="imgs/img_fissomobile.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">FISSO E MOBILE</h4>
+              <p class="card-text" >
+              Internet illimitato. Chiamate verso rete fissa e cellulari nazionali illimitate. SIM Mobile Freedom inclusa.
+               </p>
+            </div>
+            <div class="card-footer">
+              <button style="cursor:pointer;"  ng-click="checkout()" class="btn btn-primary">Aggiungi al carrello!</button>
+              <a href="configuraOfferta.html" class="btn btn-primary">Configura</a>
+            </div>
+          </div>
+        </div>
+		
+      </div>
+      <!-- /.row -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-white">
+      <div class="container">
+        <p class="m-0 text-center">Copyright &copy; Reply 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script data-require="jquery@2.1.1" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+
+  </body>
+
+</html>

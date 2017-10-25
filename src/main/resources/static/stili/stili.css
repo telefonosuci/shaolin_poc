@@ -1,0 +1,97 @@
+.frame_esterno {
+	margin: auto;
+	padding: 10px;
+	width: 80%;
+}
+
+ 
+
+
+.img-wrap_offertebloccate {
+  display:inline;
+  padding: 55px 10px 60px 10px;
+  overflow: visible;
+  position: relative;
+ 
+}
+ 
+ 
+
+.img-wrap_offertebloccate img {
+    
+    border-radius: 15px; 
+    overflow: hidden;
+     border: 2px solid rgba(0,255,0,0.7);
+ 	 height: 190px;
+}
+
+
+.img-wrap_dropped {
+  display:inline;
+  padding: 55px 10px 60px 10px;
+  overflow: visible;
+  position: relative;
+}
+
+
+.img-wrap_dropped .close {
+    
+    position: absolute;
+    color: white;
+    
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 1.0;
+}
+
+ 
+
+.img-wrap_dropped img {
+     
+    border-radius: 15px; 
+     border: 2px solid rgba(0,0,255,0.7);
+     height: 190px;
+}
+
+
+
+
+.striscia_draggabili
+{
+	
+	border-radius: 25px; 
+ 	background-color:Black !important; 
+ 	 padding: 15px 5px 15px 5px;
+}
+
+
+.img-wrap_draggabili  {
+	display: inline;
+	padding: 25px 10px 25px 10px;
+}
+
+
+.draggabile {
+    max-width : 110px;
+	border-radius: 15px; 
+    border: 1px solid White;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
+.drophere
+{
+	  
+	 max-width:150px; 	
+	 border-radius: 15px; 
+     border: 1px solid White;
+     opacity: 0.5;
+}
+
+.checkoutbtn
+{
+	cursor: pointer;
+}
+ 
