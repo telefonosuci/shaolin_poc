@@ -1,7 +1,7 @@
 <br>
 <br>
 <!-- Jumbotron Header -->
-<h2 class="display-3 top-margin">Personalizza Bundle</h2>
+<h4>Personalizza Bundle</h4>
 
 <br>
 
@@ -67,10 +67,25 @@
     </div>
 
     <div class="col-3">
-        <h3><p>Totale parziale:</p></h3>
-        <p ng-bind="totale"></p>
-        <h3><p>Totale:</p></h3>
-        <p ng-bind="totaleParziale"></p>
+
+        <table>
+            <tr>
+                <td>
+                    <h5>Totale Parziale:</h5>
+                </td>
+                <td>
+                    <h5><b>{{totaleParziale | currency}} &euro;</b></h5>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Totale:</h5>
+                </td>
+                <td>
+                    <h5><b>{{totale | currency}} &euro;</b></h5>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 

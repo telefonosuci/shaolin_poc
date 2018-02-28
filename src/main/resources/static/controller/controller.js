@@ -1,6 +1,14 @@
 var app = angular.module("app0", ["ngDragDrop"]);
 
 
+app.filter('currency', ['$filter', function($filter) {
+    return function(input) {
+        input = parseFloat(input);
+        input = input.toFixed(input % 1 === 0 ? 0 : 2);
+        return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
+}]);
+
 app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.contentPage = "main.htm";
@@ -8,9 +16,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
     $scope.totale = 0;
     $scope.totaleParziale = 0;
 
-    $scope.droppato = function(){
-        alert("ciao");
-    };
+    $scope.cartState= "In corso";
 
     $scope.ricalcolaTotale = function(){
 
@@ -36,36 +42,47 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             {
                 /*la prima e' la fissa mandatoria */
                 imgSrc: 'imgs/img_internettelefono.jpg',
-                offerName: 'Fastweb Special',
-                offerPrice: 20,
-                isMobile: false
+                offerName: 'Internet + telefono',
+                offerPrice: 29.95,
+                isMobile: false,
+                isValid:true
 
             },
             {
                 /*la seconda e' mobile mandatoria */
                 imgSrc: 'imgs/img0.jpg',
-                offerName: 'Mobile 100',
-                offerPrice: 0.95,
-                isMobile: true
+                offerName: 'Freedom',
+                offerPrice: 9.95,
+                isMobile: true,
+                isValid:true
             }
         ];
 
 
     $scope.offerte_selezionabili = [
-        /*{
-          imgSrc: 'imgs/img0.jpg',
-          offerName: 'Mobile 100',
+        {
+            imgSrc: 'imgs/img0.jpg',
+            offerName: 'Mobile 100',
+            offerPrice:1.95,
+            isMobile: true,
+            isValid:false
         } ,
         {
             imgSrc: 'imgs/img1.jpg',
             offerName: 'Mobile 250',
-        },*/
+            offerPrice: 5.95,
+            isMobile: true,
+            isValid:false
+        },
+
         {
             imgSrc: 'imgs/img2.jpg',
-            offerName: 'Mobile 500 3GB',
-            offerPrice: 5.95,
-            isMobile: true
+            offerName: 'Freedom',
+            offerPrice: 9.95,
+            isMobile: true,
+            isValid:false
         }
+
 
     ];
 
@@ -226,4 +243,10 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
     $scope.back = function () {
         window.history.back();
     };
+
+
+    $scope.configura_offerta=function(){
+        window.location="https://fastweb01--qapartial--c.cs81.visual.force.com/apex/ne__newOrderStep1?ordId=a4I260000001VAR";
+    };
+
 }]);

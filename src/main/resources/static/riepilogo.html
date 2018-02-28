@@ -1,12 +1,12 @@
 <br>
 <!-- Jumbotron Header -->
-<h4 class="display-4 top-margin">Riepilogo Carrello:</h4>
+<h4>Riepilogo Carrello:</h4>
 <br>
 
 <!-- Page Features -->
 <div>
     <div class="row">
-        <div class="col-9">
+        <div class="col-9 recap-left-col">
 
 
             <div class="recap-container">
@@ -101,7 +101,7 @@
                         <div class="img-wrap_dropped">
                             <!--<span ng-click="eliminaAggiunta($index)" class="close">&times;</span>
                             -->
-                            <span ng-click="eliminaAggiunta($index)" class="config"><img
+                            <span ng-click="configura_offerta()" class="config"><img
                                     src="imgs/png/cogwheel.png"></span>
                             <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/png/cancel.png"></span>
 
@@ -176,25 +176,108 @@
 
             </div>
         </div>
+
+
+        <!--MENU LATERALE DESTRO-->
         <div class="col-3">
 
+            <div class="right-col-recap">
+            <div class="cart-state">
+                <h5>Stato carrello:</h5><b>{{cartState}}</b>
+            </div>
+
+            <div class="recap-right-sec" ng-repeat="offerta in offerte_mandatorie">
+
+                <div class="name">
+                    <b>{{offerta.offerName}}</b>
+                    <div class="float-right">
+                        <span class="offerta-valida-{{offerta.isValid}}"></span>
+                    </div>
+                </div>
+
+
+                <table>
+                    <tr>
+                        <td>Totale mensile:</td>
+                        <td>{{offerta.offerPrice}} &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Totale altri costi:</td>
+                        <td>{{offerta.offerPrice}} &euro;</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+            <div class="recap-right-sec" ng-repeat="offerta in offerte_aggiunte">
+
+                <div class="name">
+                    <b>{{offerta.offerName}}</b>
+                    <div class="float-right">
+                        <span class="offerta-valida-{{offerta.isValid}}"></span>
+                    </div>
+                </div>
+
+
+                <table>
+                    <tr>
+                        <td>Totale mensile:</td>
+                        <td>{{offerta.offerPrice}} &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Totale altri costi:</td>
+                        <td>{{offerta.offerPrice}} &euro;</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <div>
+
+                <table>
+                    <tr>
+                        <td>
+                            <h5>Totale Parziale:</h5>
+                        </td>
+                        <td>
+                            <h5><b>{{totaleParziale | currency}} &euro;</b></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5>Totale:</h5>
+                        </td>
+                        <td>
+                            <h5><b>{{totale | currency}} &euro;</b></h5>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div align="right" class="footer-buttons">
+
+                <!--<button onclick="javascript: window.history.back(); " type="button"-->
+                <!--class="btn btn-warning checkoutbtn">Indietro-->
+                <!--</button>-->
+                <!---->
+                <button type="button" ng-click="configura()" class="btn btn-warning checkoutbtn">Indietro
+                </button>
+
+                <button type="button" ng-click="checkout()" class="btn btn-warning checkoutbtn">Conferma
+                </button>
+            </div>
+
+            </div>
 
         </div>
     </div>
 
 
-    <div class="row">
-        <div class="col-9">
 
-        </div>
-
-        <div class="col-3">
-            <h3><p>Totale parziale:</p></h3>
-            <p ng-bind="totale"></p>
-            <h3><p>Totale:</p></h3>
-            <p ng-bind="totaleParziale"></p>
-        </div>
-    </div>
 
 
     <!-- LISTA IMMAGINI OFFERTE AGGIUNGIBILI DROPPATE -->
@@ -203,15 +286,4 @@
 
 <br>
 
-<div align="right" class="footer-buttons">
 
-    <!--<button onclick="javascript: window.history.back(); " type="button"-->
-    <!--class="btn btn-warning checkoutbtn">Indietro-->
-    <!--</button>-->
-    <!---->
-    <button type="button" ng-click="configura()" class="btn btn-warning checkoutbtn">Indietro
-    </button>
-
-    <button type="button" ng-click="checkout()" class="btn btn-warning checkoutbtn">Conferma
-    </button>
-</div>

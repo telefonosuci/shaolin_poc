@@ -1,6 +1,5 @@
 .container {
 
-    padding: 20px;
 
 }
 
@@ -28,7 +27,12 @@
     border-radius: 15px; 
     overflow: hidden;
      border: 2px solid rgba(0,255,0,0.7);
- 	 height: 190px;
+
+    height: 170px;
+    width: 170px;
+    /*
+    height: 190px;
+     */
 
 }
 
@@ -41,6 +45,8 @@
      */
   overflow: visible;
   position: relative;
+    padding-left: 10px;
+
 }
 
 
@@ -51,7 +57,7 @@
     cursor: pointer;
     z-index: 999;
     opacity: 1.0;
-    top: -100px;
+    top: -90px;
 
 }
 
@@ -69,7 +75,7 @@
     cursor: pointer;
     z-index: 999;
     opacity: 1.0;
-    top: -100px;
+    top: -90px;
     right: 15px;
 
 }
@@ -87,7 +93,9 @@
      
     border-radius: 15px; 
      border: 2px solid rgba(0,0,255,0.7);
+   /*
      height: 190px;
+     */
 }
 
 
@@ -131,9 +139,10 @@
 	cursor: pointer;
 }
 
+
 .riepilogo-icon {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
 }
 
 .riga-configurazione {
@@ -144,11 +153,11 @@
 }
 
 .footer-buttons {
-    padding: 10px;
+    padding: 20px;
 }
 
 .card-footer {
-    display: flex;
+
     padding: 10px;
 }
 
@@ -174,7 +183,15 @@
     background-color: white;
     margin-bottom: 40px;
 
+
+
 }
+/*
+.recap-left-col{
+    height:600px;
+    overflow-y: auto;
+}
+*/
 
 /*
 .accordion-icon{
@@ -212,3 +229,62 @@ a.accordion-trigger span {
 }
 
 */
+
+.right-col-recap{
+
+    border-top: 4px solid #ffc726;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    background-color: white;
+    margin-bottom: 40px;
+
+    padding:10px;
+    /*
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    */
+}
+
+.recap-right-sec{
+    border: 1px solid gray;
+    margin-bottom:8px;
+
+    /*
+    border-radius: 10px;
+*/
+}
+
+.recap-right-sec .name{
+
+    /*border-radius: 10px 10px 0px 0px;
+
+     */
+    background-color: #ffc726;
+    border-bottom: 1px solid gray;
+    padding:10px;
+
+}
+
+.cart-state{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #e7eaeb;
+    border: 2px solid grey;
+    padding:20px;
+}
+
+.offerta-valida-true{
+
+    background: url(/imgs/png/checked-1.png) left top no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+}
+
+.offerta-valida-false{
+    background: url(/imgs/png/cancel-1.png) left top no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+}
