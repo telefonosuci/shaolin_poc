@@ -181,13 +181,23 @@
 }
 */
 
-a.accordion-trigger.collapsed span {
+a.accordion-trigger span {
 
     background: url(/imgs/accordion-plus.png) left top no-repeat;
     background-size: contain;
     padding-left: 20px;
 
 }
+
+a.accordion-trigger[aria-expanded="true"] span {
+
+    background: url(/imgs/icons8-cancel-50.png) left top no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+
+}
+
+/*
 
 a.accordion-trigger span {
 
@@ -196,3 +206,5 @@ a.accordion-trigger span {
     padding-left: 20px;
 
 }
+
+*/
