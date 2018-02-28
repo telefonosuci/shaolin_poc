@@ -1,0 +1,217 @@
+<br>
+<!-- Jumbotron Header -->
+<h4 class="display-4 top-margin">Riepilogo Carrello:</h4>
+<br>
+
+<!-- Page Features -->
+<div>
+    <div class="row">
+        <div class="col-9">
+
+
+            <div class="recap-container">
+
+
+                <!-- OFFERTE BLOCCATE (MANDATORIE) -->
+                <div class="row riepilogo-row" ng-repeat="offerta_mandatoria in offerte_mandatorie">
+
+
+                    <div class="col-3">
+                        <div class="img-wrap_offertebloccate">
+                            <img class="riepilogo-icon" ng-src="{{offerta_mandatoria.imgSrc}}"/>
+                        </div>
+                    </div>
+                    <div class="col-9">
+
+
+                        <div ng-if="offerta_mandatoria.isMobile" class="recap-connf-table-container">
+
+
+                            <div class="panel-group riga-configurazione">
+                                <span>
+                                    <i class="fa fa-arrow-right"></i>
+                                </span><b> Richiesta MNPIN</b>
+                            </div>
+
+
+                            <div class="panel-group riga-configurazione">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <b>
+                                            <a class="accordion-trigger" data-toggle="collapse"
+                                               href="#collapse-fix-{{$index}}">
+                                                <span class="accordion-icon"></span>
+                                                Configura ICCID
+                                            </a>
+                                        </b>
+                                    </div>
+                                    <div id="collapse-fix-{{$index}}" class="panel-collapse collapse">
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-2">ICCID</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-2">MSISDN</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-2"></div>
+                                            <div class="col-2">Tipologia</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-2">IMSI</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row riga-configurazione">
+                                <span>
+                                    <i class="fa fa-arrow-right"></i>
+                                </span><b> Inserisci IMEI</b>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Fine container fisse-->
+
+
+            <!-- inizio container opzionali-->
+            <div class="recap-container">
+                <div class="row riepilogo-row" ng-repeat="offerta in offerte_aggiunte">
+
+                    <div class="col-3">
+
+                        <div class="img-wrap_dropped">
+                            <!--<span ng-click="eliminaAggiunta($index)" class="close">&times;</span>
+                            -->
+                            <span ng-click="eliminaAggiunta($index)" class="config"><img
+                                    src="imgs/if_wrench_416405.png"></span>
+                            <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/icons8-cancel-50.png"></span>
+
+                            <img class="riepilogo-icon" ng-src="{{offerta.imgSrc}}"/>
+                        </div>
+                    </div>
+
+
+                    <div class="col-9">
+
+
+                        <div ng-if="offerta.isMobile" class="recap-connf-table-container">
+
+
+                            <div class="panel-group riga-configurazione">
+                                <span>
+                                    <i class="fa fa-arrow-right"></i>
+                                </span><b> Richiesta MNPIN</b>
+                            </div>
+
+
+                            <div class="panel-group riga-configurazione">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span>
+                                        <i class="fa fa-arrow-right"></i>
+                                        </span>
+
+                                        <b>
+                                            <a data-toggle="collapse" href="#collapse-opt-{{$index}}">Configura
+                                                ICCID</a>
+                                        </b>
+                                    </div>
+                                    <div id="collapse-opt-{{$index}}" class="panel-collapse collapse">
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-2">ICCID</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-2">MSISDN</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-2"></div>
+                                            <div class="col-2">Tipologia</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-2">IMSI</div>
+                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row riga-configurazione">
+                                <span>
+                                    <i class="fa fa-arrow-right"></i>
+                                </span><b> Inserisci IMEI</b>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-3">
+
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-9">
+
+        </div>
+
+        <div class="col-3">
+            <h3><p>Totale parziale:</p></h3>
+            <p ng-bind="totale"></p>
+            <h3><p>Totale:</p></h3>
+            <p ng-bind="totaleParziale"></p>
+        </div>
+    </div>
+
+
+    <!-- LISTA IMMAGINI OFFERTE AGGIUNGIBILI DROPPATE -->
+
+</div>
+
+<br>
+
+<div align="right" class="footer-buttons">
+
+    <!--<button onclick="javascript: window.history.back(); " type="button"-->
+    <!--class="btn btn-warning checkoutbtn">Indietro-->
+    <!--</button>-->
+    <!---->
+    <button type="button" ng-click="configura()" class="btn btn-warning checkoutbtn">Indietro
+    </button>
+
+    <button type="button" ng-click="checkout()" class="btn btn-warning checkoutbtn">Conferma
+    </button>
+</div>

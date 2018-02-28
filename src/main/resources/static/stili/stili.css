@@ -1,3 +1,9 @@
+.container {
+
+    padding: 20px;
+
+}
+
 .frame_esterno {
 	margin: auto;
 	padding: 10px;
@@ -23,26 +29,56 @@
     overflow: hidden;
      border: 2px solid rgba(0,255,0,0.7);
  	 height: 190px;
+
 }
 
 
 .img-wrap_dropped {
   display:inline;
-  padding: 55px 10px 60px 10px;
+
+    /*padding: 55px 10px 60px 10px;
+
+     */
   overflow: visible;
   position: relative;
 }
 
 
 .img-wrap_dropped .close {
-    
+
     position: absolute;
-    color: white;
-    
-    right: 20px;
+    right: -10px;
     cursor: pointer;
     z-index: 999;
     opacity: 1.0;
+    top: -100px;
+
+}
+
+.img-wrap_dropped .close img {
+
+    width: 20px;
+    height: 20px;
+    border: 0px;
+}
+
+.img-wrap_dropped .config {
+
+    position: absolute;
+    color: red;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 1.0;
+    top: -100px;
+    right: 15px;
+
+}
+
+.img-wrap_dropped .config img {
+
+    width: 20px;
+    height: 20px;
+    border: 0px;
 }
 
  
@@ -94,4 +130,69 @@
 {
 	cursor: pointer;
 }
- 
+
+.riepilogo-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.riga-configurazione {
+    color: #666;
+    background-color: #e7eaeb;
+    margin: 1px;
+}
+
+.footer-buttons {
+    padding: 10px;
+}
+
+.card-footer {
+    display: flex;
+    padding: 10px;
+}
+
+.riepilogo-row {
+    padding: 10px;
+}
+
+.recap-connf-table-container {
+
+    background-color: white;
+
+}
+
+.recap-container {
+    border-top: 4px solid #ffc726;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 40px;
+
+    background-color: white;
+    margin-bottom: 40px;
+
+}
+
+/*
+.accordion-icon{
+    background: url(/imgs/accordion-plus.png) left top no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+}
+*/
+
+a.accordion-trigger.collapsed span {
+
+    background: url(/imgs/accordion-plus.png) left top no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+
+}
+
+a.accordion-trigger span {
+
+    background: url(/imgs/icons8-cancel-50.png) left top no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+
+}

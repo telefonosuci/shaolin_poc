@@ -6,7 +6,6 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import java.io.IOException;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -15,8 +14,14 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import java.io.IOException;
 
 public class SfdcClient {
+
+    private static final Logger logger = LogManager.getLogger(SfdcClient.class);
 
   private static final String LOGINURL = "https://fastweb01--cpqdevpro2.cs88.my.salesforce.com/";
   private static final String GRANTTYPE = "services/oauth2/token?grant_type=password";
@@ -100,7 +105,7 @@ public class SfdcClient {
     String httpMessage = null;
     try {
       httpMessage = EntityUtils.toString(httpResponse.getEntity());
-
+        logger.info(httpMessage);
       final JsonFactory factory = new JsonFactory();
       final JsonParser parser = factory.createParser(httpMessage);
 

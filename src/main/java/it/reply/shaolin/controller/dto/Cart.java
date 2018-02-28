@@ -22,4 +22,12 @@ public class Cart {
   public void setMobileOfferList(List<MobileOffer> mobileOfferList) {
     this.mobileOfferList = mobileOfferList;
   }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "fixedOfferName='" + fixedOfferName + '\'' +
+                ", mobileOfferList=" + mobileOfferList +
+                '}';
+    }
 }

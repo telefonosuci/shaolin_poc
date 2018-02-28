@@ -1,0 +1,82 @@
+<br>
+<br>
+<!-- Jumbotron Header -->
+<h2 class="display-3 top-margin">Personalizza Bundle</h2>
+
+<br>
+
+<!-- Page Features -->
+<div class="row">
+
+    <div>
+
+        <div>
+            <!-- OFFERTE BLOCCATE (MANDATORIE) -->
+            <div class="img-wrap_offertebloccate" ng-repeat="offerta_mandatoria in offerte_mandatorie">
+                <img ng-src="{{offerta_mandatoria.imgSrc}}"/>
+            </div>
+
+
+            <!-- LISTA IMMAGINI OFFERTE AGGIUNGIBILI DROPPATE -->
+
+            <div class="img-wrap_dropped" ng-repeat="offerta in offerte_aggiunte">
+
+                <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/icons8-cancel-50.png"></span>
+
+                <img ng-src="{{offerta.imgSrc}}"/>
+            </div>
+
+            <!-- IMMAGINE SU CUI SI PUO' DROPPARE OFFERTE -->
+            <img class="drophere" ng-show="offerte_aggiunte.length < 3" ng-src="imgs/Immagine.png"
+                 data-drop="true"
+                 ng-model='offerte_aggiunte'
+                 data-jqyoui-options="{accept:'.draggabile'}"
+                 jqyoui-droppable="{multiple:true}"
+            />
+        </div>
+    </div>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="row text-center striscia_draggabili">
+    <div style="text-align: center;">
+        <!-- LE IMMAGINI DELLE OFFERTE DRAGGABILI -->
+
+        <div class="img-wrap_draggabili" ng-repeat="offerta in offerte_selezionabili">
+            <img class="draggabile"
+                 ng-src="{{offerta.imgSrc}}" data-drop="false" data-drag="true"
+                 ng-model="offerte_selezionabili"
+                 jqyoui-draggable="{index: {{$index}},placeholder:'keep',animate:false, deepCopy : true}"
+                 data-jqyoui-options="{revert: 'invalid',helper:'clone', containment : '#frame_esterno'}"
+
+            />
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-9">
+
+    </div>
+
+    <div class="col-3">
+        <h3><p>Totale parziale:</p></h3>
+        <p ng-bind="totale"></p>
+        <h3><p>Totale:</p></h3>
+        <p ng-bind="totaleParziale"></p>
+    </div>
+</div>
+
+<div align="right" class="footer-buttons">
+    <button onclick="javascript: window.history.back(); " type="button"
+            class="btn btn-warning checkoutbtn">Indietro
+    </button>
+
+    <button type="button" ng-click="procedi()" class="btn btn-warning checkoutbtn">Procedi</button>
+</div>

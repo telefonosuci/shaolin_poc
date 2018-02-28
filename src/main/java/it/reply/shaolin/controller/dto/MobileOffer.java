@@ -20,4 +20,12 @@ public class MobileOffer {
   public void setQuantity(Integer quantity) {
     this.quantity = quantity;
   }
+
+    @Override
+    public String toString() {
+        return "MobileOffer{" +
+                "offerName='" + offerName + '\'' +
+                ", quantity=" + quantity +
+                '}';
+    }
 }
