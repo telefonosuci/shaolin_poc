@@ -21,7 +21,7 @@
 
             <div class="img-wrap_dropped" ng-repeat="offerta in offerte_aggiunte">
 
-                <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/icons8-cancel-50.png"></span>
+                <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/png/cancel.png"></span>
 
                 <img ng-src="{{offerta.imgSrc}}"/>
             </div>
@@ -29,6 +29,7 @@
             <!-- IMMAGINE SU CUI SI PUO' DROPPARE OFFERTE -->
             <img class="drophere" ng-show="offerte_aggiunte.length < 3" ng-src="imgs/Immagine.png"
                  data-drop="true"
+                 ng-drop="droppato"
                  ng-model='offerte_aggiunte'
                  data-jqyoui-options="{accept:'.draggabile'}"
                  jqyoui-droppable="{multiple:true}"
@@ -72,6 +73,7 @@
         <p ng-bind="totaleParziale"></p>
     </div>
 </div>
+
 
 <div align="right" class="footer-buttons">
     <button onclick="javascript: window.history.back(); " type="button"

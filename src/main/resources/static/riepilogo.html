@@ -91,8 +91,9 @@
             <!-- Fine container fisse-->
 
 
+
             <!-- inizio container opzionali-->
-            <div class="recap-container">
+            <div class="recap-container" ng-if="offerte_aggiunte.length">
                 <div class="row riepilogo-row" ng-repeat="offerta in offerte_aggiunte">
 
                     <div class="col-3">
@@ -101,8 +102,8 @@
                             <!--<span ng-click="eliminaAggiunta($index)" class="close">&times;</span>
                             -->
                             <span ng-click="eliminaAggiunta($index)" class="config"><img
-                                    src="imgs/if_wrench_416405.png"></span>
-                            <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/icons8-cancel-50.png"></span>
+                                    src="imgs/png/cogwheel.png"></span>
+                            <span ng-click="eliminaAggiunta($index)" class="close"><img src="imgs/png/cancel.png"></span>
 
                             <img class="riepilogo-icon" ng-src="{{offerta.imgSrc}}"/>
                         </div>
@@ -125,13 +126,12 @@
                             <div class="panel-group riga-configurazione">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <span>
-                                        <i class="fa fa-arrow-right"></i>
-                                        </span>
-
                                         <b>
-                                            <a data-toggle="collapse" href="#collapse-opt-{{$index}}">Configura
-                                                ICCID</a>
+                                            <a class="accordion-trigger" data-toggle="collapse"
+                                               href="#collapse-opt-{{$index}}">
+                                                <span class="accordion-icon"></span>
+                                                Configura ICCID
+                                            </a>
                                         </b>
                                     </div>
                                     <div id="collapse-opt-{{$index}}" class="panel-collapse collapse">

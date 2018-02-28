@@ -140,6 +140,7 @@
     color: #666;
     background-color: #e7eaeb;
     margin: 1px;
+    padding:5px;
 }
 
 .footer-buttons {
@@ -158,6 +159,8 @@
 .recap-connf-table-container {
 
     background-color: white;
+    padding:30px;
+
 
 }
 
@@ -183,15 +186,16 @@
 
 a.accordion-trigger span {
 
-    background: url(/imgs/accordion-plus.png) left top no-repeat;
+    background: url(/imgs/png/add.png) left top no-repeat;
     background-size: contain;
     padding-left: 20px;
+    margin-rignt:10px;
 
 }
 
 a.accordion-trigger[aria-expanded="true"] span {
 
-    background: url(/imgs/icons8-cancel-50.png) left top no-repeat;
+    background: url(/imgs/png/cancel.png) left top no-repeat;
     background-size: contain;
     padding-left: 20px;
 

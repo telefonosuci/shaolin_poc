@@ -4,8 +4,33 @@ var app = angular.module("app0", ["ngDragDrop"]);
 app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.contentPage = "main.htm";
+
     $scope.totale = 0;
     $scope.totaleParziale = 0;
+
+    $scope.droppato = function(){
+        alert("ciao");
+    };
+
+    $scope.ricalcolaTotale = function(){
+
+        $scope.totale = 0;
+        $scope.totaleParziale = 0;
+
+
+        $scope.offerte_mandatorie.forEach(function (el, idx) {
+            $scope.totale = $scope.totale + el.offerPrice;
+            $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
+        });
+
+
+        $scope.offerte_aggiunte.forEach(function (el, idx) {
+            $scope.totale = $scope.totale + el.offerPrice;
+            $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
+        });
+
+    };
+
     $scope.offerte_mandatorie =
         [
             {
@@ -46,6 +71,14 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
 
     $scope.offerte_aggiunte = [];
+
+
+
+    $scope.$watch('offerte_aggiunte', function() {
+        $scope.ricalcolaTotale();
+    }, true);
+
+
 
     $scope.eliminaAggiunta = function (index) {
         $scope.offerte_aggiunte.splice(index, 1);
