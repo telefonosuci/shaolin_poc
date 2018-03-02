@@ -37,8 +37,6 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $scope.totale = $scope.totale + el.offerPrice;
             $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
         });
-
-
     };
 
     $scope.collapseMenu = function(){
@@ -122,25 +120,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
 
     $scope.configura = function () {
+
         console.log("Metodo configura");
-
-/*
-        $scope.totale = 70;
-
-        $scope.totaleParziale = 0;
-
-
-        $scope.offerte_mandatorie.forEach(function (el, idx) {
-            $scope.totale = $scope.totale + el.offerPrice;
-            $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
-        });
-
-        $scope.offerte_aggiunte.forEach(function (el, idx) {
-            $scope.totale = $scope.totale + el.offerPrice;
-            $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
-        });
-
-*/
         $scope.contentPage = "configura.html"
 
     };
@@ -178,22 +159,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 fixedOfferName: $scope.offerte_mandatorie[0].offerName,
                 mobileOfferList: mobili_toappend
             }
-/*
 
-        $scope.totale = 70;
-        $scope.totaleParziale = 0;
-
-        $scope.offerte_mandatorie.forEach(function (el, idx) {
-            $scope.totale = $scope.totale + el.offerPrice;
-            $scope.totaleParziale += el.offerPrice;
-        });
-
-        $scope.offerte_aggiunte.forEach(function (el, idx) {
-            $scope.totale = $scope.totale + el.offerPrice;
-            $scope.totaleParziale += el.offerPrice;
-        });
-
-*/
         $scope.contentPage = "riepilogo.html";
 
     };
@@ -264,16 +230,12 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
         window.history.back();
     };
 
-
     $scope.configura_offerta=function(){
         window.open(
             'https://fastweb01--qapartial--c.cs81.visual.force.com/apex/ne__newOrderStep1?ordId=a4I260000001VAR',
             '_blank' // <- This is what makes it open in a new window.
         );
     };
-
-
-
 
     $scope.autoFill = function(tag, i){
 
