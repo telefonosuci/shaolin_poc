@@ -164,6 +164,13 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     };
 
+    $scope.preCheckout = function () {
+
+        console.log("Metodo preCheckout");
+
+        $scope.contentPage = "configura_carrello.html";
+    };
+
     $scope.checkout = function () {
 
         console.log("Metodo checkout");
@@ -237,15 +244,19 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
         );
     };
 
-    $scope.autoFill = function(tag, i){
+    $scope.autoFill = function($event, tag, i){
 
         console.log("Autofill selector: " + tag + "-" + i);
+        console.log("Value: " + $event.currentTarget.value);
 
-
-        $("#msisdn-" + tag + "-" + i).val("123456789");
-        $("#tipologia-" + tag + "-" + i).val("Automatica");
-        $("#imsi-" + tag + "-" + i).val("0000000000");
-
+        if($event.currentTarget.value===""){
+            $("#msisdn-" + tag + "-" + i).val("");
+            $("#tipologia-" + tag + "-" + i).val("");
+            $("#imsi-" + tag + "-" + i).val("");
+        }else{
+            $("#msisdn-" + tag + "-" + i).val("123456789");
+            $("#tipologia-" + tag + "-" + i).val("Automatica");
+            $("#imsi-" + tag + "-" + i).val("0000000000");
+        }
     };
-
 }]);
