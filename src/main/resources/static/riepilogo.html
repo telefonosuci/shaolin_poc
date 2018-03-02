@@ -18,8 +18,11 @@
 
 
                     <div class="col-3">
-                        <div class="img-wrap_offertebloccate">
 
+                        <div class="img-wrap_offertebloccate">
+                            <span ng-if="offerta_mandatoria.isMobile" ng-click="configura_offerta()" class="config">
+                                <img src="imgs/png/cogwheel.png">
+                            </span>
 
 
                             <img class="riepilogo-icon" ng-src="{{offerta_mandatoria.imgSrc}}"/>
@@ -53,26 +56,26 @@
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-2">ICCID</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input ng-keyup="$event.keyCode == 13 ? autoFill('fix', $index) : null" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-2">MSISDN</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input id="msisdn-fix-{{$index}}" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                         <div class="row">
 
                                             <div class="col-2"></div>
                                             <div class="col-2">Tipologia</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input id="tipologia-fix-{{$index}}" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-2">IMSI</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input id="imsi-fix-{{$index}}" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                     </div>
@@ -142,26 +145,26 @@
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-2">ICCID</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input ng-keyup="$event.keyCode == 13 ? autoFill('opt',$index) : null" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-2">MSISDN</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input id="msisdn-opt-{{$index}}" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                         <div class="row">
 
                                             <div class="col-2"></div>
                                             <div class="col-2">Tipologia</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input id="tipologia-opt-{{$index}}" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-2">IMSI</div>
-                                            <div class="col-6"><input type="text"></div>
+                                            <div class="col-6"><input id="imsi-opt-{{$index}}" type="text"></div>
                                             <div class="col-2"></div>
                                         </div>
                                     </div>
@@ -188,60 +191,62 @@
             <div class="right-col-recap" id="recap-menu-right">
 
 
-                <button ng-click="collapseMenu()">Nascondi</button>
+                <button id="toggle-button" ng-click="collapseMenu()">Nascondi</button>
             <div class="cart-state">
                 <b>Stato carrello:</b><b>{{cartState}}</b>
             </div>
 
-            <div class="recap-right-sec" ng-repeat="offerta in offerte_mandatorie">
+                <div id="recap-offerte-toggable">
 
-                <div class="name">
-                    <b>{{offerta.offerName}}</b>
-                    <div class="float-right">
-                        <span class="offerta-valida-{{offerta.isValid}}"></span>
+                    <div class="recap-right-sec" ng-repeat="offerta in offerte_mandatorie">
+
+                        <div class="name">
+                            <b>{{offerta.offerName}}</b>
+                            <div class="float-right">
+                                <span class="offerta-valida-{{offerta.isValid}}"></span>
+                            </div>
+                        </div>
+
+
+                        <table>
+                            <tr>
+                                <td>Totale mensile:</td>
+                                <td>{{offerta.offerPrice}} &euro;</td>
+                            </tr>
+                            <tr>
+                                <td>Totale altri costi:</td>
+                                <td>{{offerta.otherPrices}} &euro;</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+
+
+                    <div class="recap-right-sec" ng-repeat="offerta in offerte_aggiunte">
+
+                        <div class="name">
+                            <b>{{offerta.offerName}}</b>
+                            <div class="float-right">
+                                <span class="offerta-valida-{{offerta.isValid}}"></span>
+                            </div>
+                        </div>
+
+
+                        <table>
+                            <tr>
+                                <td>Totale mensile:</td>
+                                <td>{{offerta.offerPrice}} &euro;</td>
+                            </tr>
+                            <tr>
+                                <td>Totale altri costi:</td>
+                                <td>{{offerta.otherPrices}} &euro;</td>
+                            </tr>
+                        </table>
+
+
                     </div>
                 </div>
-
-
-                <table>
-                    <tr>
-                        <td>Totale mensile:</td>
-                        <td>{{offerta.offerPrice}} &euro;</td>
-                    </tr>
-                    <tr>
-                        <td>Totale altri costi:</td>
-                        <td>{{offerta.otherPrices}} &euro;</td>
-                    </tr>
-                </table>
-
-
-            </div>
-
-
-            <div class="recap-right-sec" ng-repeat="offerta in offerte_aggiunte">
-
-                <div class="name">
-                    <b>{{offerta.offerName}}</b>
-                    <div class="float-right">
-                        <span class="offerta-valida-{{offerta.isValid}}"></span>
-                    </div>
-                </div>
-
-
-                <table>
-                    <tr>
-                        <td>Totale mensile:</td>
-                        <td>{{offerta.offerPrice}} &euro;</td>
-                    </tr>
-                    <tr>
-                        <td>Totale altri costi:</td>
-                        <td>{{offerta.otherPrices}} &euro;</td>
-                    </tr>
-                </table>
-
-
-            </div>
-
             <div>
 
                 <table>

@@ -43,8 +43,11 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.collapseMenu = function(){
 
-        console.log("Collapsinf");
-        $("#recap-menu-right").hide();
+        console.log("Collapsing");
+
+        $("#recap-offerte-toggable").toggle({
+            duration:500
+        });
 
     };
 
@@ -121,8 +124,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
     $scope.configura = function () {
         console.log("Metodo configura");
 
-
+/*
         $scope.totale = 70;
+
         $scope.totaleParziale = 0;
 
 
@@ -136,7 +140,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
         });
 
-
+*/
         $scope.contentPage = "configura.html"
 
     };
@@ -174,7 +178,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 fixedOfferName: $scope.offerte_mandatorie[0].offerName,
                 mobileOfferList: mobili_toappend
             }
-
+/*
 
         $scope.totale = 70;
         $scope.totaleParziale = 0;
@@ -189,8 +193,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $scope.totaleParziale += el.offerPrice;
         });
 
-
-        $scope.contentPage = "riepilogo.html"
+*/
+        $scope.contentPage = "riepilogo.html";
 
     };
 
@@ -266,6 +270,18 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             'https://fastweb01--qapartial--c.cs81.visual.force.com/apex/ne__newOrderStep1?ordId=a4I260000001VAR',
             '_blank' // <- This is what makes it open in a new window.
         );
+    };
+
+
+    $scope.autoFill = function(tag, i){
+
+        console.log("Autofill selector: " + tag + "-" + i);
+
+
+        $("#msisdn-" + tag + "-" + i).val("123456789");
+        $("#tipologia-" + tag + "-" + i).val("Automatica");
+        $("#imsi-" + tag + "-" + i).val("0000000000");
+
     };
 
 }]);
