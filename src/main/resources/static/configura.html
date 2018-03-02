@@ -13,7 +13,7 @@
         <div>
             <!-- OFFERTE BLOCCATE (MANDATORIE) -->
             <div class="img-wrap_offertebloccate" ng-repeat="offerta_mandatoria in offerte_mandatorie">
-                <img ng-src="{{offerta_mandatoria.imgSrc}}"/>
+                <img class="icon" ng-src="{{offerta_mandatoria.imgSrc}}"/>
             </div>
 
 
@@ -71,7 +71,7 @@
         <table>
             <tr>
                 <td>
-                    <h5>Totale Parziale:</h5>
+                    <h5>Totale Mensile:</h5>
                 </td>
                 <td>
                     <h5><b>{{totaleParziale | currency}} &euro;</b></h5>

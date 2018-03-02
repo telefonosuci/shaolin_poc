@@ -9,18 +9,21 @@ app.filter('currency', ['$filter', function($filter) {
     };
 }]);
 
+
+
 app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.contentPage = "main.htm";
 
-    $scope.totale = 0;
+    $scope.totale = 70;
     $scope.totaleParziale = 0;
 
     $scope.cartState= "In corso";
 
+
     $scope.ricalcolaTotale = function(){
 
-        $scope.totale = 0;
+        $scope.totale = 70;
         $scope.totaleParziale = 0;
 
 
@@ -35,6 +38,14 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $scope.totaleParziale = $scope.totaleParziale + el.offerPrice;
         });
 
+
+    };
+
+    $scope.collapseMenu = function(){
+
+        console.log("Collapsinf");
+        $("#recap-menu-right").hide();
+
     };
 
     $scope.offerte_mandatorie =
@@ -44,6 +55,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 imgSrc: 'imgs/img_internettelefono.jpg',
                 offerName: 'Internet + telefono',
                 offerPrice: 29.95,
+                otherPrices:70,
                 isMobile: false,
                 isValid:true
 
@@ -53,6 +65,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 imgSrc: 'imgs/img0.jpg',
                 offerName: 'Freedom',
                 offerPrice: 9.95,
+                otherPrices:0,
                 isMobile: true,
                 isValid:true
             }
@@ -64,6 +77,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             imgSrc: 'imgs/img0.jpg',
             offerName: 'Mobile 100',
             offerPrice:1.95,
+            otherPrices:0,
             isMobile: true,
             isValid:false
         } ,
@@ -71,6 +85,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             imgSrc: 'imgs/img1.jpg',
             offerName: 'Mobile 250',
             offerPrice: 5.95,
+            otherPrices:0,
             isMobile: true,
             isValid:false
         },
@@ -79,6 +94,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             imgSrc: 'imgs/img2.jpg',
             offerName: 'Freedom',
             offerPrice: 9.95,
+            otherPrices:0,
             isMobile: true,
             isValid:false
         }
@@ -106,7 +122,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
         console.log("Metodo configura");
 
 
-        $scope.totale = 0;
+        $scope.totale = 70;
         $scope.totaleParziale = 0;
 
 
@@ -160,7 +176,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             }
 
 
-        $scope.totale = 0;
+        $scope.totale = 70;
         $scope.totaleParziale = 0;
 
         $scope.offerte_mandatorie.forEach(function (el, idx) {
@@ -246,7 +262,10 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
 
     $scope.configura_offerta=function(){
-        window.location="https://fastweb01--qapartial--c.cs81.visual.force.com/apex/ne__newOrderStep1?ordId=a4I260000001VAR";
+        window.open(
+            'https://fastweb01--qapartial--c.cs81.visual.force.com/apex/ne__newOrderStep1?ordId=a4I260000001VAR',
+            '_blank' // <- This is what makes it open in a new window.
+        );
     };
 
 }]);

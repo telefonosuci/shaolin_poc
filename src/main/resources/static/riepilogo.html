@@ -12,12 +12,16 @@
             <div class="recap-container">
 
 
+
                 <!-- OFFERTE BLOCCATE (MANDATORIE) -->
                 <div class="row riepilogo-row" ng-repeat="offerta_mandatoria in offerte_mandatorie">
 
 
                     <div class="col-3">
                         <div class="img-wrap_offertebloccate">
+
+
+
                             <img class="riepilogo-icon" ng-src="{{offerta_mandatoria.imgSrc}}"/>
                         </div>
                     </div>
@@ -181,9 +185,12 @@
         <!--MENU LATERALE DESTRO-->
         <div class="col-3">
 
-            <div class="right-col-recap">
+            <div class="right-col-recap" id="recap-menu-right">
+
+
+                <button ng-click="collapseMenu()">Nascondi</button>
             <div class="cart-state">
-                <h5>Stato carrello:</h5><b>{{cartState}}</b>
+                <b>Stato carrello:</b><b>{{cartState}}</b>
             </div>
 
             <div class="recap-right-sec" ng-repeat="offerta in offerte_mandatorie">
@@ -203,7 +210,7 @@
                     </tr>
                     <tr>
                         <td>Totale altri costi:</td>
-                        <td>{{offerta.offerPrice}} &euro;</td>
+                        <td>{{offerta.otherPrices}} &euro;</td>
                     </tr>
                 </table>
 
@@ -228,7 +235,7 @@
                     </tr>
                     <tr>
                         <td>Totale altri costi:</td>
-                        <td>{{offerta.offerPrice}} &euro;</td>
+                        <td>{{offerta.otherPrices}} &euro;</td>
                     </tr>
                 </table>
 
@@ -240,7 +247,7 @@
                 <table>
                     <tr>
                         <td>
-                            <h5>Totale Parziale:</h5>
+                            <h5>Totale Mensile:</h5>
                         </td>
                         <td>
                             <h5><b>{{totaleParziale | currency}} &euro;</b></h5>
