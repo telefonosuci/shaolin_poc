@@ -1,26 +1,52 @@
-<div class="row riepilogo-row" ng-repeat="offerta_mandatoria in offerte_mandatorie">
+
+
+<div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-10">
+        <div class="row input-table">
+            <div class="col-3">
+                <div class="input-table-title coll-12">Configura ICCID</div>
+            </div>
+            <div class="col-6">
+                <div class="input-table-title coll-12">Configura MNP</div>
+            </div>
+            <div class="col-3">
+                <div class="input-table-title coll-12">Configura IMEI</div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="row riepilogo-row" ng-repeat="offerta in offerte_configurabili">
 
     <div class="col-2">
 
         <div class="img-wrap">
 
-                    <span ng-if="offerta_mandatoria.isMobile" ng-click="configura_offerta()" class="config">
+                    <span ng-if="offerta.isMobile" ng-click="configura_offerta()" class="config">
                         <img src="imgs/png/cogwheel.png" class="control-icon">
                     </span>
-            <img class="riepilogo-icon" ng-src="{{offerta_mandatoria.imgSrc}}"/>
+            <img class="riepilogo-icon" ng-src="{{offerta.imgSrc}}"/>
 
         </div>
     </div>
 
-    <div class="col-10">
-
-        <div ng-if="offerta_mandatoria.isMobile" class="row input-table">
+    <div class="col-10 input-table-border">
 
 
-            <!-- COLONNA ICCID-->
+
+
+        <div class="row input-table">
+
+    <!-- COLONNA ICCID-->
             <div class="col-3">
 
-                <div class="input-table-title coll-12">Configura ICCID</div>
+
 
                 <div class="row input-table-cell">
 
@@ -29,7 +55,7 @@
                     </div>
 
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID">
+                        <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID" tabindex=1>
                     </div>
                 </div>
 
@@ -39,7 +65,7 @@
                     </div>
 
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="MSISDN">
+                        <input type="text" name="rg-from" value="" class="form-control" placeholder="MSISDN" tabindex=2>
                     </div>
                 </div>
 
@@ -48,7 +74,7 @@
                         <b>TIPOLOGIA:</b>
                     </div>
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="TIPOLOGIA">
+                        <input type="text" name="rg-from" value="" class="form-control" placeholder="TIPOLOGIA" tabindex=3>
                     </div>
                 </div>
 
@@ -57,7 +83,7 @@
             <!-- COLONNA MNP-->
             <div class="col-6">
 
-                <div class="input-table-title coll-12">Configura MNP</div>
+
 
                 <div class="row input-table-cell">
                     <div class="col-6 row">
@@ -65,7 +91,7 @@
                             <b>NOME:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="NOME">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="NOME" tabindex=4>
                         </div>
                     </div>
                     <div class="col-6 row">
@@ -73,7 +99,7 @@
                             <b>MSISDN PORTATO:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="MSISDN PORTATO">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="MSISDN PORTATO" tabindex=8>
                         </div>
                     </div>
                 </div>
@@ -84,7 +110,7 @@
                             <b>COGNOME:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="Cognome">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="Cognome" tabindex=5>
                         </div>
                     </div>
                     <div class="col-6 row">
@@ -92,7 +118,7 @@
                             <b>CONTRATTO ORIGINE:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID" tabindex=9>
                         </div>
                     </div>
                 </div>
@@ -103,7 +129,7 @@
                             <b>CF/P:IVA:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="CF/P.IVA" tabindex=6>
                         </div>
                     </div>
                     <div class="col-6 row">
@@ -111,7 +137,7 @@
                             <b>OPERATORE TELEFONICO:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID" tabindex=10>
                         </div>
                     </div>
                 </div>
@@ -122,7 +148,7 @@
                             <b>TIPO DOCUMENTO:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="TIPO DOCUMENTO">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="TIPO DOCUMENTO" tabindex=7>
                         </div>
                     </div>
                     <div class="col-6 row">
@@ -130,14 +156,14 @@
                             <b>ICCID DONATING:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID Donaitng">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID Donaitng" tabindex=11>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-3">
-                <div class="input-table-title coll-12">Configura IMEI</div>
+
 
                 <div class="row input-table-cell">
 
@@ -146,7 +172,7 @@
                     </div>
 
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="IMEI">
+                        <input type="text" name="rg-from" value="" class="form-control" placeholder="IMEI" tabindex=12>
                     </div>
                 </div>
 

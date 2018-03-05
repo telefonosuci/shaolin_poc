@@ -63,6 +63,40 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
     };
 
 
+    $scope.offerte_configurabili =
+        [
+            {
+                imgSrc: 'imgs/img0.jpg',
+                offerName: 'Mobile 250',
+                description:"Ricarica automatica",
+                offerPrice:1.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false
+            } ,
+            {
+                imgSrc: 'imgs/img1.jpg',
+                offerName: 'Mobile 500',
+                description:"Ricaricabile con Mobile Number Portability",
+                offerPrice: 5.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false
+            }
+/*
+            ,
+            {
+                imgSrc: 'imgs/img2.jpg',
+                offerName: 'Freedom',
+                description:"Ricarica automatica con Terminale rateale ( LG G5 Silver )",
+                offerPrice: 9.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false
+            }
+            */
+
+        ];
     $scope.offerte_mandatorie =
         [
             {
@@ -104,7 +138,6 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             isMobile: true,
             isValid:false
         },
-
         {
             imgSrc: 'imgs/img2.jpg',
             offerName: 'Freedom',
@@ -113,8 +146,6 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             isMobile: true,
             isValid:false
         }
-
-
     ];
 
 

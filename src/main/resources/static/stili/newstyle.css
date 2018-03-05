@@ -43,6 +43,8 @@
     padding: 55px 10px 60px 10px;
     overflow: visible;
     */
+    width: 150px;
+    margin: 0 auto;
 }
 
 .img-wrap img {
@@ -61,4 +63,48 @@
     text-align: center;
     font-weight: bold;
     padding: 5px;
+}
+
+.input-table-border{
+    border: 1px solid #ffc726;
+}
+
+.riepilogo-row{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.vertical-iccid-label{
+    position: relative;
+    top: 170px;
+}
+
+.vertical-mnp-label{
+    position: relative;
+    top: 290px;
+}
+
+.horizontal-scroll-container{
+    /*
+    background-color: rgba(255, 0, 255, 0.2);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: calc(100% - 200px);
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    */
+}
+
+.horizontal-scroll-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+
+}
+
+.offert {
+    display: inline-block;
 }

@@ -1,1 +1,161 @@
-vertical!
+
+<div class="row horizontal-scroll-container">
+
+    <div>
+        <div class="input-table-title vertical-iccid-label">Configura ICCID</div>
+        <div class="input-table-title vertical-mnp-label">Configura MNP</div>
+    </div>
+
+
+
+
+    <div class="col-4 offert" ng-repeat="offerta in offerte_configurabili">
+        <div class="img-wrap">
+            <span ng-if="offerta.isMobile" ng-click="configura_offerta()" class="config">
+                <img src="imgs/png/cogwheel.png" class="control-icon">
+            </span>
+            <img class="riepilogo-icon" ng-src="{{offerta.imgSrc}}"/>
+        </div>
+        <div class="input-table-border">
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>ICCID:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID" tabindex=1>
+                        </div>
+                    </div>
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>MSISDN:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="MSISDN" tabindex=2>
+                        </div>
+                    </div>
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>TIPOLOGIA:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="TIPOLOGIA" tabindex=3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-6">
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>NOME:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="nome" value="" class="form-control" placeholder="NOME" tabindex=4>
+                        </div>
+                    </div>
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>Cognome:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="cognome" value="" class="form-control" placeholder="COGNOME" tabindex=5>
+                        </div>
+                    </div>
+
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>CF/P:IVA:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="piva" value="" class="form-control" placeholder="CF/P.IVA" tabindex=6>
+                        </div>
+                    </div>
+
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>TIPO DOCUMENTO:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="tipo-documento" value="" class="form-control" placeholder="TIPO DOCUMENTO" tabindex=5>
+                        </div>
+                    </div>
+
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>N. DOCUMENTO:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="piva" value="" class="form-control" placeholder="N. DOCUMENTO" tabindex=6>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-6">
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>MSISDN PORTATO:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="msisdn-p" value="" class="form-control" placeholder="MSISDN PORTATO" tabindex=7>
+                        </div>
+                    </div>
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>CONTRATTO ORIGINE:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="rg-from" value="" class="form-control" placeholder="ICCID" tabindex=8>
+                        </div>
+                    </div>
+
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>OPERATORE TELEFONICO:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="op-telefonico" value="" class="form-control" placeholder="OPERATORE TELEFONICO" tabindex=9>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>ICCID DONATING:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="iccid-donating" value="" class="form-control" placeholder="ICCID DONATING" tabindex=10>
+                        </div>
+                    </div>
+
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>TCR:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="tcr" value="" class="form-control" placeholder="TCR" tabindex=11>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
