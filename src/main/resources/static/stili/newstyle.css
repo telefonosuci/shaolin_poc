@@ -1,0 +1,41 @@
+.padding{
+    padding:20px;
+}
+
+.control-icon{
+
+    width: 12px !important;
+    height: 12px !important;
+    border: none !important;
+}
+
+.offer-image{
+
+}
+
+.config{
+    position: relative;
+    left: 160px;
+}
+.delete{
+
+}
+
+.img-wrap {
+    display:inline;
+    position: relative;
+    /*
+    padding: 55px 10px 60px 10px;
+    overflow: visible;
+    */
+}
+
+.img-wrap img {
+
+    border-radius: 15px;
+    /*overflow: hidden;
+    */
+    border: 2px solid rgba(0,255,0,0.7);
+    height: 170px;
+    width: 170px;
+}

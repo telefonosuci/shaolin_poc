@@ -13,7 +13,7 @@ app.filter('currency', ['$filter', function($filter) {
 
 app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
-    $scope.contentPage = "main.htm";
+    $scope.contentPage = "main.html";
 
     $scope.totale = 70;
     $scope.totaleParziale = 0;
