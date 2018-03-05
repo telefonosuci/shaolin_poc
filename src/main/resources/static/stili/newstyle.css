@@ -1,8 +1,19 @@
 .padding{
-    padding:20px;
+    padding:40px;
+}
+.input-table-cell{
+    padding: 5px;
 }
 
 .control-icon{
+
+    width: 12px !important;
+    height: 12px !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+.control-span{
 
     width: 12px !important;
     height: 12px !important;
@@ -14,16 +25,18 @@
 }
 
 .config{
-    position: relative;
+    position: absolute;
     left: 160px;
+    top: -20px;
 }
 .delete{
 
 }
 
 .img-wrap {
-    display:inline;
+
     position: relative;
+    margin:10px;
     /*
     padding: 55px 10px 60px 10px;
     overflow: visible;
@@ -35,7 +48,15 @@
     border-radius: 15px;
     /*overflow: hidden;
     */
-    border: 2px solid rgba(0,255,0,0.7);
+    border: 2px solid rgba(40, 108, 212, 0.7);
     height: 170px;
     width: 170px;
+}
+
+.input-table-title{
+    background-color: #ffc726;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
