@@ -14,6 +14,8 @@ app.filter('currency', ['$filter', function($filter) {
 app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.contentPage = "main.html";
+    $scope.displayLayout = "horizontal.html";
+
 
     $scope.totale = 70;
     $scope.totaleParziale = 0;
@@ -48,6 +50,18 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
         });
 
     };
+
+    $scope.switchLayout = function(){
+
+        console.log("Ciao");
+        if($scope.displayLayout==="horizontal.html"){
+            $scope.displayLayout = "vertical.html";
+        }else{
+            $scope.displayLayout = "horizontal.html";
+        }
+
+    };
+
 
     $scope.offerte_mandatorie =
         [
