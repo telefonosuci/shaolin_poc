@@ -371,4 +371,13 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             event.currentTarget.style.border="";
         }
     };
+
+    $scope.validateIMEI=function(event){
+        console.log("Validate IMEI");
+        if(event.currentTarget.value==="353841080604242"){
+            event.currentTarget.style.border="1px solid green";
+        }else{
+            event.currentTarget.style.border="1px solid red";
+        }
+    };
 }]);
