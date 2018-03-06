@@ -2,19 +2,12 @@
 
 
 
-
-
-
-<div class="h-scroll-container">
-
-
-    <!--
-    <div>
+<div class="vertical-label">
     <div class="input-table-title vertical-iccid-label">Configura ICCID</div>
     <div class="input-table-title vertical-mnp-label">Configura MNP</div>
 </div>
 
--->
+<div class="h-scroll-container">
 
     <div class="offert" ng-repeat="offerta in offerte_configurabili">
         <div class="img-wrap">
@@ -104,7 +97,7 @@
                             <b>N. DOCUMENTO:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" value="" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
+                            <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.numero_documento" value="" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
                         </div>
                     </div>
 
@@ -118,7 +111,7 @@
                             <b>MSISDN PORTATO:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" id="msisdn-portato{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.iccid_donating" value="" class="form-control" placeholder="" tabindex={{($index)*100+9}}>
+                            <input type="text" id="msisdn-portato{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" value="" class="form-control" placeholder="" tabindex={{($index)*100+9}}>
                         </div>
                     </div>
 
@@ -157,7 +150,7 @@
                             <b>TCR:</b>
                         </div>
                         <div class="col-8">
-                            <input type="text" id="tcr-{{$index}}" name="tcr-{{$index}}" ng-model="offerta.iccid_donating" value="" class="form-control" placeholder="" tabindex={{($index)*100+13}}>
+                            <input type="text" id="tcr-{{$index}}" name="tcr-{{$index}}" ng-model="offerta.tcr" value="" class="form-control" placeholder="" tabindex={{($index)*100+13}}>
                         </div>
                     </div>
                 </div>

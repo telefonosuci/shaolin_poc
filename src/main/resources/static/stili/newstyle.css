@@ -84,13 +84,20 @@
 
 .vertical-iccid-label{
     position: relative;
-    top: 170px;
+    top: 210px;
 }
 
 .vertical-mnp-label{
     position: relative;
     top: 290px;
 }
+
+.vertical-label{
+    idth: 160px;
+    display: block;
+    float: left;
+}
+
 
 .h-scroll-container{
     overflow-x: auto;

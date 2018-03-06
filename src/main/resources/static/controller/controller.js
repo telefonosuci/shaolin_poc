@@ -84,7 +84,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 origine:"",
                 operatore:"",
                 iccid_donating:"",
-                imei:""
+                imei:"",
+                numero_documento:""
             } ,
             {
                 imgSrc: 'imgs/img1.jpg',
@@ -105,7 +106,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 origine:"",
                 operatore:"",
                 iccid_donating:"",
-                imei:""
+                imei:"",
+                numero_documento:""
+
             }
 
             ,
@@ -128,28 +131,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 origine:"",
                 operatore:"",
                 iccid_donating:"",
-                imei:""
-            },
-            {
-                imgSrc: 'imgs/img2.jpg',
-                offerName: 'Freedom',
-                description:"Ricarica automatica con Terminale rateale ( LG G5 Silver )",
-                offerPrice: 9.95,
-                otherPrices:0,
-                isMobile: true,
-                isValid:false,
-                iccid:"",
-                msisdn:"",
-                tipologia:"",
-                nome:"",
-                cognome:"",
-                cfpiva:"",
-                tipo:"",
-                msisdn_portato:"",
-                origine:"",
-                operatore:"",
-                iccid_donating:"",
-                imei:""
+                imei:"",
+                numero_documento:""
             }
 
 
