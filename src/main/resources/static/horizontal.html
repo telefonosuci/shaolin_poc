@@ -39,19 +39,14 @@
 
     <div class="col-10 input-table-border">
 
-
-
-
         <div class="row input-table">
 
     <!-- COLONNA ICCID-->
             <div class="col-3">
 
-
-
                 <div class="row input-table-cell">
 
-                    <label class="col-4 col-form-label">
+                    <label for="iccid-{{$index}}" class="col-4 col-form-label">
                         <b>ICCID:</b>
                     </label>
 
@@ -61,7 +56,7 @@
                 </div>
 
                 <div class="row input-table-cell">
-                    <label class="col-4 col-form-label">
+                    <label for="msisdn-{{$index}}" class="col-4 col-form-label">
                         <b>MSISDN:</b>
                     </label>
 
@@ -71,7 +66,7 @@
                 </div>
 
                 <div class="row input-table-cell">
-                    <label class="col-4 col-form-label">
+                    <label for="tipologia-{{$index}}" class="col-4 col-form-label">
                         <b>TIPOLOGIA:</b>
                     </label>
                     <div class="col-8">
@@ -82,13 +77,12 @@
             </div>
 
             <!-- COLONNA MNP-->
-            <div class="col-6">
+            <div class="col-6 input-table-cell">
 
+                <div class="row">
 
-
-                <div class="row input-table-cell">
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="nome-{{$index}}" class="col-4 col-form-label">
                             <b>NOME:</b>
                         </label>
                         <div class="col-8">
@@ -96,18 +90,19 @@
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="msisdn-portato-{{$index}}" class="col-4 col-form-label">
                             <b>MSISDN PORTATO:</b>
                         </label>
                         <div class="col-8">
                             <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
                         </div>
                     </div>
-                </div>
 
-                <div class="row input-table-cell">
+                </div>
+                <div class="row">
+
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="cognome-{{$index}}" class="col-4 col-form-label">
                             <b>COGNOME:</b>
                         </label>
                         <div class="col-8">
@@ -115,18 +110,19 @@
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="origine-{{$index}}" class="col-4 col-form-label">
                             <b>CONTRATTO ORIGINE:</b>
                         </label>
                         <div class="col-8">
                             <input type="text" id="origine-{{$index}}" name="origine-{{$index}}" ng-model="offerta.origine" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+9}}>
                         </div>
                     </div>
-                </div>
 
-                <div class="row input-table-cell">
+                </div>
+                <div class="row">
+
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="cfpiva-{{$index}}" class="col-4 col-form-label">
                             <b>CF/P:IVA:</b>
                         </label>
                         <div class="col-8">
@@ -134,18 +130,19 @@
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="operatore-{{$index}}" class="col-4 col-form-label">
                             <b>OPERATORE TELEFONICO:</b>
                         </label>
                         <div class="col-8">
                             <input type="text" id="operatore-{{$index}}" name="operatore-{{$index}}" ng-model="offerta.operatore" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+10}}>
                         </div>
                     </div>
-                </div>
 
-                <div class="row input-table-cell">
+                </div>
+                <div class="row">
+
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="tipo-{{$index}}" class="col-4 col-form-label">
                             <b>TIPO DOCUMENTO:</b>
                         </label>
                         <div class="col-8">
@@ -153,18 +150,19 @@
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="iccid-donating-{{$index}}" class="col-4 col-form-label">
                             <b>ICCID DONATING:</b>
                         </label>
                         <div class="col-8">
                             <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+11}}>
                         </div>
                     </div>
-                </div>
 
-                <div class="row input-table-cell">
+                </div>
+                <div class="row">
+
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="numero-documento-{{$index}}" class="col-4 col-form-label">
                             <b>NUMERO DOCUMENTO:</b>
                         </label>
                         <div class="col-8">
@@ -172,13 +170,14 @@
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <label class="col-4 col-form-label">
+                        <label for="flag-tcr-{{$index}}" class="col-4 col-form-label">
                             <b>FLAG TCR:</b>
                         </label>
                         <div class="col-8">
                             <input type="text" id="flag-tcr-{{$index}}" name="flag-tcr-{{$index}}" ng-model="offerta.flag_tcr" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+13}}>
                         </div>
                     </div>
+
                 </div>
 
             </div>

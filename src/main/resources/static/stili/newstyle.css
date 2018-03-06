@@ -5,6 +5,7 @@
     padding: 5px;
     font-size: x-small;
     color: #6c757d;
+
 }
 
 .window-control-icon{
@@ -130,3 +131,6 @@
     padding:2px;
 }
 
+.row{
+    margin-left:0px;
+}
