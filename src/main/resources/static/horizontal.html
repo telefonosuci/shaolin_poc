@@ -51,31 +51,31 @@
 
                 <div class="row input-table-cell">
 
-                    <div class="col-4">
+                    <label class="col-4 col-form-label">
                         <b>ICCID:</b>
-                    </div>
+                    </label>
 
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+1}}>
+                        <input type="text" id="iccid-{{$index}}" name="iccid-{$index}}" ng-model="offerta.iccid" class="form-control" placeholder="" tabindex={{($index)*100+1}}>
                     </div>
                 </div>
 
                 <div class="row input-table-cell">
-                    <div class="col-4">
+                    <label class="col-4 col-form-label">
                         <b>MSISDN:</b>
-                    </div>
+                    </label>
 
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+2}}>
+                        <input type="text" id="msisdn-{{$index}}" name="msisdn-{{$index}}" ng-model="offerta.msisdn" class="form-control" placeholder="" tabindex={{($index)*100+2}}>
                     </div>
                 </div>
 
                 <div class="row input-table-cell">
-                    <div class="col-4">
+                    <label class="col-4 col-form-label">
                         <b>TIPOLOGIA:</b>
-                    </div>
+                    </label>
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+3}}>
+                        <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+3}}>
                     </div>
                 </div>
 
@@ -88,76 +88,76 @@
 
                 <div class="row input-table-cell">
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>NOME:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+4}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+4}}>
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>MSISDN PORTATO:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
                         </div>
                     </div>
                 </div>
 
                 <div class="row input-table-cell">
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>COGNOME:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+5}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+5}}>
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>CONTRATTO ORIGINE:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+9}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+9}}>
                         </div>
                     </div>
                 </div>
 
                 <div class="row input-table-cell">
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>CF/P:IVA:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+6}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+6}}>
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>OPERATORE TELEFONICO:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+10}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+10}}>
                         </div>
                     </div>
                 </div>
 
                 <div class="row input-table-cell">
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>TIPO DOCUMENTO:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+7}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+7}}>
                         </div>
                     </div>
                     <div class="col-6 row">
-                        <div class="col-4">
+                        <label class="col-4 col-form-label">
                             <b>ICCID DONATING:</b>
-                        </div>
+                        </label>
                         <div class="col-8">
-                            <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+11}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" class="form-control" placeholder="" tabindex={{($index)*100+11}}>
                         </div>
                     </div>
                 </div>
@@ -168,12 +168,12 @@
 
                 <div class="row input-table-cell">
 
-                    <div class="col-4">
+                    <label for="imei-{{$index}}" class="col-4 col-form-label">
                         <b>IMEI:</b>
-                    </div>
+                    </label>
 
                     <div class="col-8">
-                        <input type="text" name="rg-from" value="" class="form-control" placeholder="" tabindex={{($index)*100+12}}>
+                        <input type="text" id="imei-{{$index}}" name="imei-{{$index}}" ng-model="offerta.imei" class="form-control" placeholder="" tabindex={{($index)*100+12}}>
                     </div>
                 </div>
 

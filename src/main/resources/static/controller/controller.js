@@ -72,7 +72,19 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 offerPrice:1.95,
                 otherPrices:0,
                 isMobile: true,
-                isValid:false
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo:"",
+                msis_dnportato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:""
             } ,
             {
                 imgSrc: 'imgs/img1.jpg',
@@ -81,7 +93,19 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 offerPrice: 5.95,
                 otherPrices:0,
                 isMobile: true,
-                isValid:false
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo:"",
+                msisd_nportato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:""
             }
 
             ,
@@ -92,7 +116,19 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 offerPrice: 9.95,
                 otherPrices:0,
                 isMobile: true,
-                isValid:false
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo:"",
+                msisdn_portato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:""
             },
             {
                 imgSrc: 'imgs/img2.jpg',
@@ -101,7 +137,19 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 offerPrice: 9.95,
                 otherPrices:0,
                 isMobile: true,
-                isValid:false
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo:"",
+                msisdn_portato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:""
             }
 
 
