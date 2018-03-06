@@ -3,7 +3,7 @@
 }
 .input-table-cell{
     padding: 5px;
-    font-size: small;
+    font-size: x-small;
     color: #6c757d;
 }
 
@@ -44,13 +44,15 @@
 .img-wrap {
 
     position: relative;
-    margin:10px;
+
+
     /*
     padding: 55px 10px 60px 10px;
     overflow: visible;
     */
     width: 150px;
     margin: 0 auto;
+    margin-bottom:20px;
 }
 
 .img-wrap img {
@@ -90,35 +92,22 @@
     top: 290px;
 }
 
-.horizontal-scroll-container{
-    /*
-    background-color: rgba(255, 0, 255, 0.2);
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: calc(100% - 200px);
-    height: auto;
+.h-scroll-container{
     overflow-x: auto;
     white-space: nowrap;
-    */
-}
-
-.horizontal-scroll-container {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-
-
 }
 
 .offert {
     display: inline-block;
+    vertical-align: top;
+    float: none;
+    width:600px;
+    padding:20px;
+    white-space: normal;
+
 }
-
-
-
 
 /* BOOTSTRAP OVERRIDE */
 .form-control{
-    padding:0px;
+    padding:2px;
 }

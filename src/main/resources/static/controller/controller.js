@@ -83,7 +83,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 isMobile: true,
                 isValid:false
             }
-/*
+
             ,
             {
                 imgSrc: 'imgs/img2.jpg',
@@ -93,8 +93,17 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 otherPrices:0,
                 isMobile: true,
                 isValid:false
+            },
+            {
+                imgSrc: 'imgs/img2.jpg',
+                offerName: 'Freedom',
+                description:"Ricarica automatica con Terminale rateale ( LG G5 Silver )",
+                offerPrice: 9.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false
             }
-            */
+
 
         ];
     $scope.offerte_mandatorie =
