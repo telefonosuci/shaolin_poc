@@ -5,6 +5,7 @@
 <div class="vertical-label">
     <div class="input-table-title vertical-iccid-label">Configura ICCID</div>
     <div class="input-table-title vertical-mnp-label">Configura MNP</div>
+    <div class="input-table-title vertical-imei-label">Configura IMEI</div>
 </div>
 
 <div class="h-scroll-container">
@@ -20,7 +21,7 @@
         </div>
         <div class="input-table-border">
 
-            <div class="row">
+            <div class="row input-section">
                 <div class="col-6">
                     <div class="row input-table-cell">
                         <div class="col-4">
@@ -51,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row input-section">
 
                 <div class="col-6">
                     <div class="row input-table-cell">
@@ -153,6 +154,23 @@
                             <input type="text" id="flag-tcr-{{$index}}" name="flag-tcr-{{$index}}" ng-model="offerta.flag_tcr" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+13}}>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+
+            <div class="row input-section">
+                <div class="col-6">
+                    <div class="row input-table-cell">
+                        <div class="col-4">
+                            <b>IMEI:</b>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="imei-{{$index}}" name="imei-{{$index}}" ng-model="offerta.imei" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+14}}>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
                 </div>
             </div>
 
