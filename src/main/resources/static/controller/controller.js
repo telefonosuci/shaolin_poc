@@ -85,7 +85,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 operatore:"",
                 iccid_donating:"",
                 imei:"",
-                numero_documento:""
+                numero_documento:"",
+                flag_tcr:""
             } ,
             {
                 imgSrc: 'imgs/img1.jpg',
@@ -107,7 +108,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 operatore:"",
                 iccid_donating:"",
                 imei:"",
-                numero_documento:""
+                numero_documento:"",
+                flag_tcr:""
 
             }
 
@@ -132,7 +134,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 operatore:"",
                 iccid_donating:"",
                 imei:"",
-                numero_documento:""
+                numero_documento:"",
+                flag_tcr:""
             }
 
 
@@ -342,6 +345,30 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $("#msisdn-" + tag + "-" + i).val("123456789");
             $("#tipologia-" + tag + "-" + i).val("Automatica");
             $("#imsi-" + tag + "-" + i).val("0000000000");
+        }
+    };
+
+    $scope.iccidFill = function(event, i){
+
+        console.log("Autofill selector: " + "-" + i);
+        console.log("Value: " + event.currentTarget.value);
+
+        if(event.currentTarget.value===""){
+            $("#msisdn-" + i).val("").trigger('change');
+            $("#tipologia-" + i).val("").trigger('change');
+        }else{
+            $("#msisdn-" + i).val("123456789").trigger('change');
+            $("#tipologia-" + i).val("Automatica").trigger('change');
+
+        }
+    };
+
+    $scope.validateField=function(event){
+        console.log("Validate field");
+        if(event.currentTarget.value===""){
+            event.currentTarget.style.border="1px solid red";
+        }else{
+            event.currentTarget.style.border="";
         }
     };
 }]);
