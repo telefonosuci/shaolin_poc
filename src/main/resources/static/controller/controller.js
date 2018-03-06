@@ -374,7 +374,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.validateIMEI=function(event){
         console.log("Validate IMEI");
-        if(event.currentTarget.value==="353841080604242"){
+        if(event.currentTarget.value.length==15){
             event.currentTarget.style.border="1px solid green";
         }else{
             event.currentTarget.style.border="1px solid red";
