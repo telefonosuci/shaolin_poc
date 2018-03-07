@@ -22,7 +22,7 @@
 
         <div class="input-table-border">
 
-            <div class="input-section">
+            <div class="input-section section-iccid-{{$index}}">
 
                 <div class="row">
 
@@ -33,8 +33,11 @@
                         </label>
 
                         <div class="col-8">
-                            <input type="text" id="iccid-{{$index}}" name="iccid-{$index}}" ng-model="offerta.iccid" ng-blur="validateField($event);iccidFill($event,$index)" class="form-control" placeholder="" tabindex={{($index)*100+1}}>
+                            <input type="text" id="iccid-{{$index}}" name="iccid-{$index}}" ng-model="offerta.iccid" ng-blur="validateField($event);validateICCID($event,$index)" class="form-control" placeholder="" tabindex={{($index)*100+1}}>
+                            <img id="loading-iccid-{{$index}}" class="loading-gif-vertical" src="imgs/loading-animation.gif" hidden>
+                            <span id="error-iccid-{{$index}}" class="error-message"></span>
                         </div>
+
                     </div>
                     <div class="row col-6 input-table-cell">
                     </div>
@@ -71,7 +74,7 @@
 
             </div>
 
-            <div class="input-section">
+            <div class="input-section section-mnp-{{$index}}">
 
 
                 <div class="row">
@@ -81,7 +84,7 @@
                             <b>NOME:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="nome-{{$index}}" name="nome-{{$index}}" ng-model="offerta.nome" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+4}}>
+                            <input type="text" id="nome-{{$index}}" name="nome-{{$index}}" ng-model="offerta.nome" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+4}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
                     <div class="col-6 row input-table-cell">
@@ -89,7 +92,7 @@
                             <b>MSISDN PORTATO:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" ng-blur="validateField($event);validateMSISDNDonating($event)" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
+                            <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" ng-blur="validateField($event);validateMSISDN($event)" class="form-control" placeholder="" tabindex={{($index)*100+8}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
 
@@ -101,7 +104,7 @@
                             <b>COGNOME:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="cognome-{{$index}}" name="cognome-{{$index}}" ng-model="offerta.cognome" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+5}}>
+                            <input type="text" id="cognome-{{$index}}" name="cognome-{{$index}}" ng-model="offerta.cognome" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+5}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
                     <div class="col-6 row input-table-cell">
@@ -109,7 +112,7 @@
                             <b>CONTRATTO ORIGINE:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="origine-{{$index}}" name="origine-{{$index}}" ng-model="offerta.origine" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+9}}>
+                            <input type="text" id="origine-{{$index}}" name="origine-{{$index}}" ng-model="offerta.origine" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+9}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
 
@@ -121,7 +124,7 @@
                             <b>CF/P:IVA:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="cfpiva-{{$index}}" name="cfpiva-{{$index}}" ng-model="offerta.cfpiva" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+6}}>
+                            <input type="text" id="cfpiva-{{$index}}" name="cfpiva-{{$index}}" ng-model="offerta.cfpiva" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+6}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
                     <div class="col-6 row input-table-cell">
@@ -129,7 +132,8 @@
                             <b>OPERATORE TELEFONICO:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="operatore-{{$index}}" name="operatore-{{$index}}" ng-model="offerta.operatore" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+10}}>
+                            <select type="text" id="operatore-{{$index}}" name="operatore-{{$index}}" ng-options="operatore.nome for operatore in operatori" ng-model="offerta.operatore" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+10}} ng-disabled="offerta.mnp_disabled">
+                            </select>
                         </div>
                     </div>
 
@@ -141,7 +145,8 @@
                             <b>TIPO DOCUMENTO:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="tipo-{{$index}}" name="tipo-{{$index}}" ng-model="offerta.tipo" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+7}}>
+                            <select type="text" id="tipo-{{$index}}" name="tipo-{{$index}}" ng-options="documento.tipo for documento in tipoDocumenti" ng-model="offerta.tipo_documento" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+7}} ng-disabled="offerta.mnp_disabled">
+                            </select>
                         </div>
                     </div>
                     <div class="col-6 row input-table-cell">
@@ -149,7 +154,7 @@
                             <b>ICCID DONATING:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" ng-blur="validateField($event);validateICCIDDonating($event)" class="form-control" placeholder="" tabindex={{($index)*100+11}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" ng-blur="validateField($event);validateICCID($event)" class="form-control" placeholder="" tabindex={{($index)*100+11}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
 
@@ -161,7 +166,7 @@
                             <b>NUMERO DOCUMENTO:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="numero-documento-{{$index}}" name="numero-documento-{{$index}}" ng-model="offerta.numero_documento" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+12}}>
+                            <input type="text" id="numero-documento-{{$index}}" name="numero-documento-{{$index}}" ng-model="offerta.numero_documento" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+12}} ng-disabled="offerta.mnp_disabled">
                         </div>
                     </div>
                     <div class="col-6 row input-table-cell">
@@ -169,7 +174,10 @@
                             <b>FLAG TCR:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="flag-tcr-{{$index}}" name="flag-tcr-{{$index}}" ng-model="offerta.flag_tcr" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+13}}>
+                            <select type="text" id="flag-tcr-{{$index}}" name="flag-tcr-{{$index}}" ng-model="offerta.flag_tcr" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+13}} ng-disabled="offerta.mnp_disabled">
+                                <option value="SI">Si</option>
+                                <option value="NO">No</option>
+                            </select>
                         </div>
                     </div>
 
@@ -177,7 +185,7 @@
 
             </div>
 
-            <div class="input-section">
+            <div class="input-section section-imei-{{$index}}">
 
                 <div class="row">
                     <div class="row col-6 input-table-cell">
@@ -185,7 +193,8 @@
                             <b>IMEI:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="imei-{{$index}}" name="imei-{{$index}}" ng-model="offerta.imei" ng-blur="validateIMEI($event)" class="form-control" placeholder="" tabindex={{($index)*100+14}}>
+                            <input type="text" id="imei-{{$index}}" name="imei-{{$index}}" ng-model="offerta.imei" ng-blur="validateIMEI($event, $index)" class="form-control" placeholder="" tabindex={{($index)*100+14}} ng-disabled="offerta.imei_disabled">
+                            <span id="error-imei-{{$index}}" class="error-message"></span>
                         </div>
 
                     </div>
@@ -200,4 +209,10 @@
 
     </div>
 
+
+
+
+
 </div>
+
+

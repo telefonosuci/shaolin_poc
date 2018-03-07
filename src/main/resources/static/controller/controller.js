@@ -22,6 +22,263 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
     $scope.cartState= "In corso";
 
+    $scope.operatori=[
+        {
+            nome:"BT Enia Mobile"
+        },
+        {
+            nome:"BT Italia Full MVNO"
+        },
+        {
+            nome:"Coop Voce"
+        },
+        {
+            nome:"Daily Telecom Mobile"
+        },
+        {
+            nome:"Digi Mobili FULL"
+        },
+        {
+            nome:"Digitel Italia"
+        },
+        {
+            nome:"ERG Mobile"
+        },
+        {
+            nome:"Green ICN"
+        },
+        {
+            nome:"Intematica"
+        },
+        {
+            nome:"Lycamobile Full MVNO"
+        },
+        {
+            nome:"Nextus Telecom"
+        },
+        {
+            nome:"Noitel Italia"
+        },
+        {
+            nome:"Noverca Kena Mobile Telecom"
+        },
+        {
+            nome:"NV Mobile"
+        },
+        {
+            nome:"Postemobile Full"
+        },
+        {
+            nome:"Poste Mobile"
+        },
+        {
+            nome:"Rabona Mobile"
+        },
+        {
+            nome:"RINGO MOBILE"
+        },
+        {
+            nome:"Tim"
+        },
+        {
+            nome:"Tiscali"
+        },
+        {
+            nome:"Tre"
+        },
+        {
+            nome:"UNO Mobile"
+        },
+        {
+            nome:"Vodafone"
+        },
+        {
+            nome:"Welcome Italia"
+        },
+        {
+            nome:"Wind"
+        },
+        {
+            nome:"VEI"
+        },
+        {
+            nome:"Iliad Italia"
+        },
+        {
+            nome:"Optima Italia"
+        }
+    ];
+
+    $scope.tipoDocumenti=[
+        {
+            tipo:"Patente"
+        },
+        {
+            tipo:"Passaporto"
+        },
+        {
+            tipo:"Carta di identità"
+        }
+    ];
+
+    $scope.tipoContratto=[
+        {
+            nome:"Ricaricabile"
+        },
+        {
+            nome:"Abbonamento"
+        }
+    ];
+
+
+
+    $scope.offerte_configurabili =
+        [
+            {
+                imgSrc: 'imgs/img2.jpg',
+                offerName: 'Mobile 500',
+                description:"Ricaricabile con Mobile Number Portability",
+                offerPrice: 5.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo_documento:"",
+                msisd_nportato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:"",
+                numero_documento:"",
+                flag_tcr:"",
+                mnp_disabled:true,
+                imei_disabled:true
+
+            },
+            {
+                imgSrc: 'imgs/img1.jpg',
+                offerName: 'Mobile 250',
+                description:"Ricarica automatica",
+                offerPrice:1.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo_documento:"",
+                msis_dnportato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:"",
+                numero_documento:"",
+                flag_tcr:"",
+                mnp_disabled:true,
+                imei_disabled:false
+            },
+            {
+                imgSrc: 'imgs/img_mobilefreedom.jpg',
+                offerName: 'Freedom',
+                description:"Ricarica automatica con Terminale rateale ( LG G5 Silver )",
+                offerPrice: 9.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:false,
+                iccid:"",
+                msisdn:"",
+                tipologia:"",
+                nome:"",
+                cognome:"",
+                cfpiva:"",
+                tipo_documento:"",
+                msisdn_portato:"",
+                origine:"",
+                operatore:"",
+                iccid_donating:"",
+                imei:"",
+                numero_documento:"",
+                flag_tcr:"",
+                mnp_disabled:false,
+                imei_disabled:true
+            }
+
+
+        ];
+    $scope.offerte_mandatorie =
+        [
+            {
+                /*la prima e' la fissa mandatoria */
+                imgSrc: 'imgs/img_internettelefono.jpg',
+                offerName: 'Internet + telefono',
+                offerPrice: 29.95,
+                otherPrices:70,
+                isMobile: false,
+                isValid:true
+
+            },
+            {
+                /*la seconda e' mobile mandatoria */
+                imgSrc: 'imgs/img0.jpg',
+                offerName: 'Freedom',
+                offerPrice: 9.95,
+                otherPrices:0,
+                isMobile: true,
+                isValid:true
+            }
+        ];
+
+    $scope.offerte_selezionabili = [
+        {
+            imgSrc: 'imgs/img0.jpg',
+            offerName: 'Mobile 100',
+            offerPrice:1.95,
+            otherPrices:0,
+            isMobile: true,
+            isValid:false
+        } ,
+        {
+            imgSrc: 'imgs/img1.jpg',
+            offerName: 'Mobile 250',
+            offerPrice: 5.95,
+            otherPrices:0,
+            isMobile: true,
+            isValid:false
+        },
+        {
+            imgSrc: 'imgs/img2.jpg',
+            offerName: 'Freedom',
+            offerPrice: 9.95,
+            otherPrices:0,
+            isMobile: true,
+            isValid:false
+        }
+    ];
+
+    $scope.sampleData= {
+
+            mobile500:{
+
+            },
+            moblie250:{
+
+            },
+            freedom:{
+
+            }
+
+        };
+
+
+
 
     $scope.ricalcolaTotale = function(){
 
@@ -60,136 +317,19 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $scope.displayLayout = "horizontal.html";
         }
 
+        $(".section-mnp-0 input").prop("disabled", true);
+        $(".section-mnp-0 select").prop("disabled", true);
+        $(".section-imei-0 input").prop("disabled", true);
+
+        $(".section-imei-1 input").prop("disabled", true);
+
+        $(".section-mnp-2 input").prop("disabled", true);
+        $(".section-mnp-2 select").prop("disabled", true);
+
     };
 
 
-    $scope.offerte_configurabili =
-        [
-            {
-                imgSrc: 'imgs/img0.jpg',
-                offerName: 'Mobile 250',
-                description:"Ricarica automatica",
-                offerPrice:1.95,
-                otherPrices:0,
-                isMobile: true,
-                isValid:false,
-                iccid:"",
-                msisdn:"",
-                tipologia:"",
-                nome:"",
-                cognome:"",
-                cfpiva:"",
-                tipo:"",
-                msis_dnportato:"",
-                origine:"",
-                operatore:"",
-                iccid_donating:"",
-                imei:"",
-                numero_documento:"",
-                flag_tcr:""
-            } ,
-            {
-                imgSrc: 'imgs/img1.jpg',
-                offerName: 'Mobile 500',
-                description:"Ricaricabile con Mobile Number Portability",
-                offerPrice: 5.95,
-                otherPrices:0,
-                isMobile: true,
-                isValid:false,
-                iccid:"",
-                msisdn:"",
-                tipologia:"",
-                nome:"",
-                cognome:"",
-                cfpiva:"",
-                tipo:"",
-                msisd_nportato:"",
-                origine:"",
-                operatore:"",
-                iccid_donating:"",
-                imei:"",
-                numero_documento:"",
-                flag_tcr:""
 
-            }
-
-            ,
-            {
-                imgSrc: 'imgs/img2.jpg',
-                offerName: 'Freedom',
-                description:"Ricarica automatica con Terminale rateale ( LG G5 Silver )",
-                offerPrice: 9.95,
-                otherPrices:0,
-                isMobile: true,
-                isValid:false,
-                iccid:"",
-                msisdn:"",
-                tipologia:"",
-                nome:"",
-                cognome:"",
-                cfpiva:"",
-                tipo:"",
-                msisdn_portato:"",
-                origine:"",
-                operatore:"",
-                iccid_donating:"",
-                imei:"",
-                numero_documento:"",
-                flag_tcr:""
-            }
-
-
-        ];
-    $scope.offerte_mandatorie =
-        [
-            {
-                /*la prima e' la fissa mandatoria */
-                imgSrc: 'imgs/img_internettelefono.jpg',
-                offerName: 'Internet + telefono',
-                offerPrice: 29.95,
-                otherPrices:70,
-                isMobile: false,
-                isValid:true
-
-            },
-            {
-                /*la seconda e' mobile mandatoria */
-                imgSrc: 'imgs/img0.jpg',
-                offerName: 'Freedom',
-                offerPrice: 9.95,
-                otherPrices:0,
-                isMobile: true,
-                isValid:true
-            }
-        ];
-
-
-    $scope.offerte_selezionabili = [
-        {
-            imgSrc: 'imgs/img0.jpg',
-            offerName: 'Mobile 100',
-            offerPrice:1.95,
-            otherPrices:0,
-            isMobile: true,
-            isValid:false
-        } ,
-        {
-            imgSrc: 'imgs/img1.jpg',
-            offerName: 'Mobile 250',
-            offerPrice: 5.95,
-            otherPrices:0,
-            isMobile: true,
-            isValid:false
-        },
-        {
-            imgSrc: 'imgs/img2.jpg',
-            offerName: 'Freedom',
-            offerPrice: 9.95,
-            otherPrices:0,
-            isMobile: true,
-            isValid:false
-        }
-    ];
 
 
     $scope.offerte_aggiunte = [];
@@ -332,68 +472,90 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
         );
     };
 
-    $scope.autoFill = function($event, tag, i){
-
-        console.log("Autofill selector: " + tag + "-" + i);
-        console.log("Value: " + $event.currentTarget.value);
-
-        if($event.currentTarget.value===""){
-            $("#msisdn-" + tag + "-" + i).val("");
-            $("#tipologia-" + tag + "-" + i).val("");
-            $("#imsi-" + tag + "-" + i).val("");
-        }else{
-            $("#msisdn-" + tag + "-" + i).val("3341250125");
-            $("#tipologia-" + tag + "-" + i).val("Voce e Dati");
-            $("#imsi-" + tag + "-" + i).val("0000000000");
-        }
-    };
-
     $scope.iccidFill = function(event, i){
 
         console.log("Autofill selector: " + "-" + i);
         console.log("Value: " + event.currentTarget.value);
 
-        if(event.currentTarget.value===""){
-            $("#msisdn-" + i).val("").trigger('change');
-            $("#tipologia-" + i).val("").trigger('change');
-        }else{
-            $("#msisdn-" + i).val("3341250125").trigger('change');
-            $("#tipologia-" + i).val("Voce e Dati").trigger('change');
+        $("#loading-iccid-" + i).attr("hidden", false);
 
-        }
+        setTimeout(function(){
+
+            if(event.currentTarget.value===""){
+                $("#msisdn-" + i).val("").trigger('change');
+                $("#tipologia-" + i).val("").trigger('change');
+            }else{
+                if(i==0){
+                    $("#msisdn-" + i).val("3341250125").trigger('change');
+                    $("#tipologia-" + i).val("Voce e Dati").trigger('change');
+                }else if(i == 1){
+                    $("#msisdn-" + i).val("3338850898").trigger('change');
+                    $("#tipologia-" + i).val("Voce").trigger('change');
+                }else if(i == 2){
+                    $("#msisdn-" + i).val("3202434432").trigger('change');
+                    $("#tipologia-" + i).val("Voce").trigger('change');
+                }
+
+            }
+
+            $("#loading-iccid-" + i).attr("hidden", true);
+
+        }, 3000);
+
+
     };
 
     $scope.validateField=function(event){
+
         console.log("Validate field");
         if(event.currentTarget.value===""){
-            event.currentTarget.style.border="1px solid red";
+            event.currentTarget.style.border="1px solid #b73217";
+            return false;
         }else{
             event.currentTarget.style.border="";
+            return true;
         }
     };
 
-    $scope.validateIMEI=function(event){
+    $scope.validateIMEI=function(event, i){
         console.log("Validate IMEI");
         if(event.currentTarget.value.length==15){
             event.currentTarget.style.border="1px solid green";
+            $("#error-imei-" + i).html("");
+            return true;
         }else{
-            event.currentTarget.style.border="1px solid red";
+            event.currentTarget.style.border="1px solid #b73217";
+            //var errorSpan = $('<span />').attr('className', 'error-message').html('IMEI non valido.');
+            //event.currentTarget.nextSibling=errorSpan;
+            $("#error-imei-" + i).html("IMEI non valido.");
+            return false;
         }
     };
 
 
-    $scope.validateICCIDDonating = function(event){
+    $scope.validateICCID = function(event, i){
 
         console.log("Validate ICCID Donating");
 
-        if(event.currentTarget.value.length>=19){
+        if(event.currentTarget.value.length==19
+            || event.currentTarget.value.length==20
+        ){
             event.currentTarget.style.border="1px solid green";
+            $("#error-iccid-" + i).html("");
+            $scope.iccidFill(event, i);
+            return true;
+
         }else{
-            event.currentTarget.style.border="1px solid red";
+            event.currentTarget.style.border="1px solid #b73217";
+            $("#error-iccid-" + i).html("ICCID non valido.");
+            $("#msisdn-" + i).val("").trigger('change');
+            $("#tipologia-" + i).val("").trigger('change');
+
+            return false;
         }
     };
 
-    $scope.validateMSISDNDonating = function(event){
+    $scope.validateMSISDN = function(event){
 
         console.log("Validate ICCID Donating");
 
@@ -402,9 +564,16 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             || event.currentTarget.value.length>=10
         ){
             event.currentTarget.style.border="1px solid green";
+            return true;
         }else{
-            event.currentTarget.style.border="1px solid red";
+            event.currentTarget.style.border="1px solid #b73217";
+            return false;
         }
+    };
+
+    $scope.disableSection = function(i, section){
+        $(".section-" + section + "-" + i + " input").prop("disabled", true);
+        $(".section-" + section + "-" + i + " select").prop("disabled", true);
     };
 
 }]);

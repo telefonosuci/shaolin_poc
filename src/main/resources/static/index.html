@@ -34,24 +34,44 @@
     <script src="controller/controller.js"></script>
 
 </head>
-<body ng-app="app0">
+<body ng-app="app0" ng-controller="ctr0">
 
-    <nav class="navbar navbar-dark bg-yellow fixed-top">
-        <div class="container">
-            <a class="navbar-brand app-name" href="#">Shaolin</a>
+    <div class="fixed-top">
+        <nav class="navbar navbar-dark bg-yellow">
+            <div class="container">
+                <a class="navbar-brand app-name" href="#">Shaolin</a>
+            </div>
+
+        </nav>
+
+        <div class="reply-menu">
+
+            <a ng-click=""  title=”Indietro”>
+                <img alt="Indietro" class="window-control-icon" src="imgs/button-back-1-512.png">
+            </a>
+            <a ng-click="switchLayout()" title=”Inverti”>
+                <img alt="Inverti" class="window-control-icon" src="imgs/refresh-icon.png">
+            </a>
+            <a ng-click="" title=”Procedi”>
+                <img alt="Procedi" class="window-control-icon" src="imgs/png/checked-1.png">
+            </a>
         </div>
-    </nav>
+    </div>
 
 
 
 
-    <div ng-controller="ctr0" class="padding">
+    <div class="padding">
 
-        <img ng-click="switchLayout()" class="window-control-icon" src="imgs/refresh-icon.png">
 
         <div ng-include="displayLayout"></div>
 
     </div>
 
+    <script>
+
+
+
+    </script>
 </body>
 </html>

@@ -1,5 +1,18 @@
 .padding{
     padding:40px;
+    margin-top: 80px;
+}
+
+.reply-menu{
+
+    background-color: #FFFFFF;
+    border: 3px solid #ffc726;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top:20px;
+    border-radius: 15px;
+    text-align: center;
+    padding:10px;
 }
 .input-table-cell{
     padding: 5px;
@@ -46,6 +59,20 @@
 }
 .delete{
 
+}
+
+.loading-gif{
+    width: 20px;
+    position: absolute;
+    left: 225px;
+    bottom: 5px;
+}
+
+.loading-gif-vertical{
+    width: 20px;
+    position: absolute;
+    left: 160px;
+    bottom: 5px;
 }
 
 .img-wrap {
@@ -131,10 +158,14 @@
 .input-section{
     margin:20px;
 }
+.error-message{
+    color: #b73217;
+}
 
 /* BOOTSTRAP OVERRIDE */
 .form-control{
     padding:2px;
+    font-size: small;
 }
 
 .row{
@@ -142,5 +173,9 @@
 }
 .col-form-label{
     text-transform: uppercase;
+}
+
+select.form-control:not([size]):not([multiple]){
+    height:auto; !important;
 }
 
