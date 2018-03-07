@@ -342,8 +342,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $("#tipologia-" + tag + "-" + i).val("");
             $("#imsi-" + tag + "-" + i).val("");
         }else{
-            $("#msisdn-" + tag + "-" + i).val("123456789");
-            $("#tipologia-" + tag + "-" + i).val("Automatica");
+            $("#msisdn-" + tag + "-" + i).val("3341250125");
+            $("#tipologia-" + tag + "-" + i).val("Voce e Dati");
             $("#imsi-" + tag + "-" + i).val("0000000000");
         }
     };
@@ -357,8 +357,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             $("#msisdn-" + i).val("").trigger('change');
             $("#tipologia-" + i).val("").trigger('change');
         }else{
-            $("#msisdn-" + i).val("123456789").trigger('change');
-            $("#tipologia-" + i).val("Automatica").trigger('change');
+            $("#msisdn-" + i).val("3341250125").trigger('change');
+            $("#tipologia-" + i).val("Voce e Dati").trigger('change');
 
         }
     };
@@ -380,4 +380,31 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
             event.currentTarget.style.border="1px solid red";
         }
     };
+
+
+    $scope.validateICCIDDonating = function(event){
+
+        console.log("Validate ICCID Donating");
+
+        if(event.currentTarget.value.length>=19){
+            event.currentTarget.style.border="1px solid green";
+        }else{
+            event.currentTarget.style.border="1px solid red";
+        }
+    };
+
+    $scope.validateMSISDNDonating = function(event){
+
+        console.log("Validate ICCID Donating");
+
+        if(
+            event.currentTarget.value.length>=9
+            || event.currentTarget.value.length>=10
+        ){
+            event.currentTarget.style.border="1px solid green";
+        }else{
+            event.currentTarget.style.border="1px solid red";
+        }
+    };
+
 }]);

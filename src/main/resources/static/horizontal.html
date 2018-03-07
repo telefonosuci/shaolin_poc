@@ -94,7 +94,7 @@
                             <b>MSISDN PORTATO:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
+                            <input type="text" id="msisdn-portato-{{$index}}" name="msisdn-portato-{{$index}}" ng-model="offerta.msisdn_portato" ng-blur="validateField($event);validateMSISDNDonating($event)" class="form-control" placeholder="" tabindex={{($index)*100+8}}>
                         </div>
                     </div>
 
@@ -154,7 +154,7 @@
                             <b>ICCID DONATING:</b>
                         </label>
                         <div class="col-8">
-                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" ng-blur="validateField($event)" class="form-control" placeholder="" tabindex={{($index)*100+11}}>
+                            <input type="text" id="iccid-donating-{{$index}}" name="iccid-donating-{{$index}}" ng-model="offerta.iccid_donating" ng-blur="validateField($event);validateICCIDDonating($event)" class="form-control" placeholder="" tabindex={{($index)*100+11}}>
                         </div>
                     </div>
 
