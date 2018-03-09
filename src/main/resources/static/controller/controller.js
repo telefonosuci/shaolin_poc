@@ -157,7 +157,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 numero_documento:"",
                 flag_tcr:"",
                 mnp_disabled:true,
-                imei_disabled:true
+                imei_disabled:true,
+                contract_type:"abbonamento",
+                terminal_type:"oneshot"
 
             },
             {
@@ -183,7 +185,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 numero_documento:"",
                 flag_tcr:"",
                 mnp_disabled:true,
-                imei_disabled:false
+                imei_disabled:false,
+                contract_type:"autoricarica",
+                terminal_type:"rateale"
             },
             {
                 //imgSrc: 'imgs/img_mobilefreedom.jpg',
@@ -209,7 +213,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 numero_documento:"",
                 flag_tcr:"",
                 mnp_disabled:false,
-                imei_disabled:true
+                imei_disabled:true,
+                contract_type:"ricaricabile",
+                terminal_type:"sussidiato"
             }
 
 

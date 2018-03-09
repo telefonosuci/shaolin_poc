@@ -38,9 +38,13 @@
                         </span>
                         -->
 
-                <img class="category-icon" src="imgs/phone-icons/png/smartphone-blocked.png">
-                <img class="category-icon" src="imgs/phone-icons/png/smartphone-24-hours-service.png">
-                <img class="category-icon" src="imgs/phone-icons/png/smartphone-call.png">
+                <img ng-if="offerta.contract_type=='abbonamento'" class="category-icon abbonamento" src="imgs/phone-icons/png/smartphone-blocked.png">
+                <img ng-if="offerta.contract_type=='autoricarica'" class="category-icon autoricarica" src="imgs/phone-icons/png/smartphone-with-hand.png">
+                <img ng-if="offerta.contract_type=='ricaricabile'" class="category-icon ricaricabile" src="imgs/phone-icons/png/smartphone-with-reload-arrows.png">
+
+                <img ng-if="offerta.terminal_type=='sussidiato'" class="category-icon sussidiato" src="imgs/phone-icons/png/smartphones-couple.png">
+                <img ng-if="offerta.terminal_type=='rateale'" class="category-icon rateale" src="imgs/phone-icons/png/smartphone-with-emoticon.png">
+                <img ng-if="offerta.terminal_type=='oneshot'" class="category-icon oneshot" src="imgs/phone-icons/png/smartphone-with-shield.png">
 
                 <div class="image-tab tab-left" id="offer-tab-{{$index}}" ng-click="expandInfo($index)">
 

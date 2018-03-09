@@ -133,8 +133,8 @@ input:required {
     margin-top:20px;
     border: 2px solid rgba(40, 108, 212, 0.7);
     border-radius: 15px;
-    width:250px;
-    height: 250px;
+    width:240px;
+    height: 240px;
 }
 
 .img-wrap .offer-image {
@@ -162,6 +162,30 @@ input:required {
     padding: 3px;
     position: relative;
     bottom: 50px;
+
+    background-repeat: no-repeat;
+    height: auto; /*or your image's height*/
+    margin: 0;
+
+}
+
+.abbonamento{
+    background-color: #17a2b8;
+}
+.autoricarica{
+    background-color: #8DBE5A;
+}
+.ricaricabile{
+    background-color: #721c24;
+}
+.sussidiato{
+    background-color: #EC5800;
+}
+.rateale{
+    background-color: #d39e00;
+}
+.oneshot{
+    background-color: #0069d9;
 }
 
 .image-tab {
