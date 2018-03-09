@@ -188,7 +188,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 imei_disabled:false,
                 contract_type:"autoricarica",
                 terminal_type:"rateale",
-                info:"<p><b>Huawei Ascend P7 Black</b></p><p>A 192 euro con rata da 8 euro.</p>"
+                info:"<ul><li><b>Huawei Ascend P7 Black</b></li></ul>"
             },
             {
                 //imgSrc: 'imgs/img_mobilefreedom.jpg',
@@ -217,7 +217,7 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 imei_disabled:true,
                 contract_type:"abbonamento",
                 terminal_type:"no",
-                info:"Richiesta MNP."
+                info:"<ul><li><b>Richiesta MNP</b></li></ul>"
             }
 
 

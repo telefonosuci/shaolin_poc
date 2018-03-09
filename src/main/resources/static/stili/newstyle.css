@@ -178,7 +178,7 @@ input:required {
     background-color: #8DBE5A;
 }
 .ricaricabile{
-    background-color: #721c24;
+    background-color: #d72338;
 }
 .sussidiato{
     background-color: #EC5800;
@@ -211,13 +211,20 @@ input:required {
 .tab-left{
     background-image: url("/imgs/tab-left.png");
 }
-
+.icon-left{
+    float: left;
+    margin-left: 10px;
+}
+.icon-right{
+    float: right;
+    margin-right: 20px;
+}
 .image-tab-info{
     margin-left:10px;
     height: 100%;
     width: 140px;
     display: none;
-    font-size: x-small;
+    font-size: small;
     padding:10px;
     text-align: left;
 }
@@ -242,17 +249,17 @@ input:required {
 
 .vertical-iccid-label{
     position: relative;
-    top: 250px;
+    top: 280px;
 }
 
 .vertical-mnp-label{
     position: relative;
-    top: 345px;
+    top: 375px;
 }
 
 .vertical-imei-label{
     position: relative;
-    top: 595px;
+    top: 625px;
 }
 
 
@@ -307,4 +314,7 @@ select.form-control:not([size]):not([multiple]){
     position: absolute;
     margin-left:64px;
     margin-top:32px;
+}
+dl, ol, ul {
+    padding-left: 0px;
 }

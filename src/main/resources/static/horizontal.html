@@ -38,13 +38,25 @@
                         </span>
                         -->
 
-                <img ng-if="offerta.contract_type=='abbonamento'" class="category-icon abbonamento" src="imgs/phone-icons/png/international-calls.png">
-                <img ng-if="offerta.contract_type=='autoricarica'" class="category-icon autoricarica" src="imgs/phone-icons/png/refresh-wifi-signal.png">
-                <img ng-if="offerta.contract_type=='ricaricabile'" class="category-icon ricaricabile" src="imgs/phone-icons/png/telephone-receiver-with-circular-arrows.png">
+                <a ng-if="offerta.contract_type=='abbonamento'" title="Abbonamento">
+                    <img class="category-icon abbonamento icon-left" src="imgs/phone-icons/png/international-calls.png">
+                </a>
+                <a ng-if="offerta.contract_type=='autoricarica'" title="Ricarica automatica">
+                    <img class="category-icon abbonamento icon-left" src="imgs/phone-icons/png/refresh-wifi-signal.png">
+                </a>
+                <a ng-if="offerta.contract_type=='ricaricabile'" title="Ricaricabile">
+                    <img class="category-icon ricaricabile icon-left" src="imgs/phone-icons/png/telephone-receiver-with-circular-arrows.png">
+                </a>
 
-                <img ng-if="offerta.terminal_type=='sussidiato'" class="category-icon sussidiato" src="imgs/phone-icons/png/smartphones-couple.png">
-                <img ng-if="offerta.terminal_type=='rateale'" class="category-icon rateale" src="imgs/phone-icons/png/smartphone-with-emoticon.png">
-                <img ng-if="offerta.terminal_type=='oneshot'" class="category-icon oneshot" src="imgs/phone-icons/png/smartphone-with-shield.png">
+                <a ng-if="offerta.terminal_type=='sussidiato'" title="Sussidiato">
+                    <img class="category-icon sussidiato icon-right" src="imgs/phone-icons/png/smartphones-couple.png">
+                </a>
+                <a ng-if="offerta.terminal_type=='rateale'" title="Rateale">
+                    <img class="category-icon rateale icon-right" src="imgs/phone-icons/png/smartphone-with-emoticon.png">
+                </a>
+                <a ng-if="offerta.terminal_type=='oneshot'" title="One shot">
+                    <img class="category-icon oneshot icon-right" src="imgs/phone-icons/png/smartphone-with-shield.png">
+                </a>
 
                 <div ng-if="offerta.info!=''" class="image-tab tab-left" id="offer-tab-{{$index}}" ng-click="expandInfo($index)">
 
