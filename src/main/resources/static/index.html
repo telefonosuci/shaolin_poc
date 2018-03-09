@@ -37,23 +37,38 @@
 <body ng-app="app0" ng-controller="ctr0">
 
     <div class="fixed-top">
-        <nav class="navbar navbar-dark bg-yellow">
+        <nav class="navbar navbar-dark reply-header">
             <div class="container">
-                <a class="navbar-brand app-name" href="#">Shaolin</a>
+
+                <a class="navbar-brand app-name" href="#">
+                    <img src="imgs/reply.png" class="reply-logo">
+                    <b>Shaolin</b>
+
+                </a>
+
+
             </div>
 
         </nav>
-
+        <div ng-show="formofferte.$invalid" class="alert alert-danger" role="alert">
+            <strong>Attenzione!</strong>
+            <br>
+            Configurazioni incomplete.
+        </div>
         <div class="reply-menu">
 
-            <a ng-click=""  title=”Indietro”>
-                <img alt="Indietro" class="window-control-icon" src="imgs/button-back-1-512.png">
+            <a ng-click="" title=”Indietro” class="back-anchor" style="float:left;">
+                <img alt="Indietro" class="window-control-icon" src="imgs/green-back-button.png">
             </a>
-            <a ng-click="switchLayout()" title=”Inverti”>
-                <img alt="Inverti" class="window-control-icon" src="imgs/refresh-icon.png">
+            <a ng-click="switchLayout()" title=”Ruota”>
+                <img alt="Ruota" class="window-control-icon" src="imgs/refresh-icon.png">
             </a>
-            <a ng-click="" title=”Procedi”>
-                <img alt="Procedi" class="window-control-icon" src="imgs/png/checked-1.png">
+            <a ng-show="formofferte.$invalid" ng-click="" title=”Procedi” style="float:right;">
+                <img alt="Procedi" class="window-control-icon-disabled" src="imgs/m-pause.png">
+            </a>
+
+            <a ng-show="formofferte.$valid" ng-click="" title=”Procedi” style="float:right;">
+                <img alt="Procedi" class="window-control-icon procedi-icon" src="imgs/png/checked-1.png">
             </a>
         </div>
     </div>
@@ -64,14 +79,19 @@
     <div class="padding">
 
 
-        <div ng-include="displayLayout"></div>
+        <form name="formofferte">
+            <div ng-include="displayLayout"></div>
+        </form>
 
+        <!--
+        <div>
+            <p>Form valid: {{formofferte.$valid}}</p>
+            <p>Input prova: {{formofferte.iccid0}}</p>
+
+        </div>
+        -->
     </div>
 
-    <script>
 
-
-
-    </script>
 </body>
 </html>

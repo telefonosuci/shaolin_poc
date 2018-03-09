@@ -477,10 +477,6 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
         console.log("Autofill selector: " + "-" + i);
         console.log("Value: " + event.currentTarget.value);
 
-        $("#loading-iccid-" + i).attr("hidden", false);
-
-        setTimeout(function(){
-
             if(event.currentTarget.value===""){
                 $("#msisdn-" + i).val("").trigger('change');
                 $("#tipologia-" + i).val("").trigger('change');
@@ -497,12 +493,6 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 }
 
             }
-
-            $("#loading-iccid-" + i).attr("hidden", true);
-
-        }, 3000);
-
-
     };
 
     $scope.validateField=function(event){
@@ -518,18 +508,28 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
     };
 
     $scope.validateIMEI=function(event, i){
+
         console.log("Validate IMEI");
-        if(event.currentTarget.value.length==15){
-            event.currentTarget.style.border="1px solid green";
-            $("#error-imei-" + i).html("");
-            return true;
-        }else{
-            event.currentTarget.style.border="1px solid #b73217";
-            //var errorSpan = $('<span />').attr('className', 'error-message').html('IMEI non valido.');
-            //event.currentTarget.nextSibling=errorSpan;
-            $("#error-imei-" + i).html("IMEI non valido.");
-            return false;
-        }
+
+        $("#loading-imei-" + i).attr("hidden", false);
+
+        setTimeout(function(){
+
+            if(event.currentTarget.value.length==15){
+                event.currentTarget.style.border="1px solid green";
+                $("#error-imei-" + i).html("");
+                $("#loading-imei-" + i).attr("hidden", true);
+                return true;
+            }else{
+                event.currentTarget.style.border="1px solid #b73217";
+                //var errorSpan = $('<span />').attr('className', 'error-message').html('IMEI non valido.');
+                //event.currentTarget.nextSibling=errorSpan;
+                $("#error-imei-" + i).html("IMEI non valido.");
+                $("#loading-imei-" + i).attr("hidden", true);
+                return false;
+            }
+
+        }, 3000);
     };
 
 
@@ -537,22 +537,28 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
 
         console.log("Validate ICCID Donating");
 
-        if(event.currentTarget.value.length==19
-            || event.currentTarget.value.length==20
-        ){
-            event.currentTarget.style.border="1px solid green";
-            $("#error-iccid-" + i).html("");
-            $scope.iccidFill(event, i);
-            return true;
+        $("#loading-iccid-" + i).attr("hidden", false);
 
-        }else{
-            event.currentTarget.style.border="1px solid #b73217";
-            $("#error-iccid-" + i).html("ICCID non valido.");
-            $("#msisdn-" + i).val("").trigger('change');
-            $("#tipologia-" + i).val("").trigger('change');
+        setTimeout(function(){
+            if(event.currentTarget.value.length==19
+                || event.currentTarget.value.length==20
+            ){
+                event.currentTarget.style.border="1px solid green";
+                $("#error-iccid-" + i).html("");
+                $scope.iccidFill(event, i);
+                $("#loading-iccid-" + i).attr("hidden", true);
+                return true;
 
-            return false;
-        }
+            }else{
+                event.currentTarget.style.border="1px solid #b73217";
+                $("#error-iccid-" + i).html("ICCID non valido.");
+                $("#msisdn-" + i).val("").trigger('change');
+                $("#tipologia-" + i).val("").trigger('change');
+                $("#loading-iccid-" + i).attr("hidden", true);
+                return false;
+            }
+
+        }, 3000);
     };
 
     $scope.validateMSISDN = function(event){
@@ -574,6 +580,22 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
     $scope.disableSection = function(i, section){
         $(".section-" + section + "-" + i + " input").prop("disabled", true);
         $(".section-" + section + "-" + i + " select").prop("disabled", true);
+    };
+
+    $scope.expandInfo= function(i){
+
+        var tab=$("#offer-tab-"+i);
+
+        if(tab.hasClass("tab-right")){
+            tab.removeClass("tab-right");
+            tab.addClass("tab-left");
+        }else{
+            tab.removeClass("tab-left");
+            tab.addClass("tab-right");
+        }
+
+        $("#offer-info-"+i).toggle(500);
+
     };
 
 }]);
