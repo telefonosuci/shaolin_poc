@@ -1,4 +1,4 @@
-var app = angular.module("app0", ["ngDragDrop"]);
+var app = angular.module("app0", ["ngDragDrop","ngSanitize"]);
 
 
 app.filter('currency', ['$filter', function($filter) {
@@ -158,9 +158,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 flag_tcr:"",
                 mnp_disabled:true,
                 imei_disabled:true,
-                contract_type:"abbonamento",
-                terminal_type:"oneshot"
-
+                contract_type:"ricaricabile",   //autoricarica|abbonamento|ricaricabile
+                terminal_type:"no", //sussidiato|rateale|oneshot
+                info:""
             },
             {
                 imgSrc: 'imgs/img1.jpg',
@@ -187,7 +187,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 mnp_disabled:true,
                 imei_disabled:false,
                 contract_type:"autoricarica",
-                terminal_type:"rateale"
+                terminal_type:"rateale",
+                info:"<p><b>Huawei Ascend P7 Black</b></p><p>A 192 euro con rata da 8 euro.</p>"
             },
             {
                 //imgSrc: 'imgs/img_mobilefreedom.jpg',
@@ -214,8 +215,9 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 flag_tcr:"",
                 mnp_disabled:false,
                 imei_disabled:true,
-                contract_type:"ricaricabile",
-                terminal_type:"sussidiato"
+                contract_type:"abbonamento",
+                terminal_type:"no",
+                info:"Richiesta MNP."
             }
 
 

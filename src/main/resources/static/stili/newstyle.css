@@ -133,8 +133,8 @@ input:required {
     margin-top:20px;
     border: 2px solid rgba(40, 108, 212, 0.7);
     border-radius: 15px;
-    width:240px;
-    height: 240px;
+    width:200px;
+    height: 200px;
 
     text-align: center;
 }
@@ -163,7 +163,7 @@ input:required {
     border: 2px solid black;
     padding: 3px;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
 
     background-repeat: no-repeat;
     height: auto; /*or your image's height*/
@@ -191,7 +191,7 @@ input:required {
 }
 
 .image-tab {
-    border-left: 2px solid #6c757d;
+    border-left: 1px solid #6c757d;
     position: absolute;
     min-width: 10px;
     height: 100%;
@@ -217,7 +217,9 @@ input:required {
     height: 100%;
     width: 140px;
     display: none;
-
+    font-size: x-small;
+    padding:10px;
+    text-align: left;
 }
 
 

@@ -38,20 +38,17 @@
                         </span>
                         -->
 
-                <img ng-if="offerta.contract_type=='abbonamento'" class="category-icon abbonamento" src="imgs/phone-icons/png/smartphone-blocked.png">
-                <img ng-if="offerta.contract_type=='autoricarica'" class="category-icon autoricarica" src="imgs/phone-icons/png/smartphone-with-hand.png">
-                <img ng-if="offerta.contract_type=='ricaricabile'" class="category-icon ricaricabile" src="imgs/phone-icons/png/smartphone-with-reload-arrows.png">
+                <img ng-if="offerta.contract_type=='abbonamento'" class="category-icon abbonamento" src="imgs/phone-icons/png/international-calls.png">
+                <img ng-if="offerta.contract_type=='autoricarica'" class="category-icon autoricarica" src="imgs/phone-icons/png/refresh-wifi-signal.png">
+                <img ng-if="offerta.contract_type=='ricaricabile'" class="category-icon ricaricabile" src="imgs/phone-icons/png/telephone-receiver-with-circular-arrows.png">
 
                 <img ng-if="offerta.terminal_type=='sussidiato'" class="category-icon sussidiato" src="imgs/phone-icons/png/smartphones-couple.png">
                 <img ng-if="offerta.terminal_type=='rateale'" class="category-icon rateale" src="imgs/phone-icons/png/smartphone-with-emoticon.png">
                 <img ng-if="offerta.terminal_type=='oneshot'" class="category-icon oneshot" src="imgs/phone-icons/png/smartphone-with-shield.png">
 
-                <div class="image-tab tab-left" id="offer-tab-{{$index}}" ng-click="expandInfo($index)">
+                <div ng-if="offerta.info!=''" class="image-tab tab-left" id="offer-tab-{{$index}}" ng-click="expandInfo($index)">
 
-
-                    <div class="image-tab-info" id="offer-info-{{$index}}">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
+                    <div class="image-tab-info" id="offer-info-{{$index}}" ng-bind-html="offerta.info"></div>
 
                 </div>
 
