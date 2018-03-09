@@ -186,7 +186,8 @@ app.controller('ctr0', ["$scope", "$http", function ($scope, $http) {
                 imei_disabled:false
             },
             {
-                imgSrc: 'imgs/img_mobilefreedom.jpg',
+                //imgSrc: 'imgs/img_mobilefreedom.jpg',
+                imgSrc: 'imgs/img2.jpg',
                 offerName: 'Freedom',
                 description:"Ricarica automatica con Terminale rateale ( LG G5 Silver )",
                 offerPrice: 9.95,
