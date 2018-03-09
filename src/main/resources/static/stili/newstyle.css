@@ -135,6 +135,8 @@ input:required {
     border-radius: 15px;
     width:240px;
     height: 240px;
+
+    text-align: center;
 }
 
 .img-wrap .offer-image {
@@ -155,7 +157,7 @@ input:required {
 
 .category-icon{
 
-    width: 50px;
+    width: 40px;
     background-color: white;
     border-radius: 50%;
     border: 2px solid black;
