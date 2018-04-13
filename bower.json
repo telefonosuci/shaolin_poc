@@ -1,0 +1,19 @@
+{
+  "name": "shaolin",
+  "description": "shaolin",
+  "main": "server/server.js",
+  "authors": [
+    "e.succhielli <e.succhielli@reply.it>"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.6.7",
+    "angular-route": "1.6.7",
+    "bootstrap": "4.0.0",
+    "angular-bootstrap": "1.3.3",
+    "jquery": "3.2.1",
+    "angular-sanitize": "^1.6.9",
+    "popper.js": "^1.14.3"
+  }
+}
